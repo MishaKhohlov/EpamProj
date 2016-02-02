@@ -1,25 +1,23 @@
-<h1>Catalog</h1>
-<a href="/#/catalog/coats"><h1>Coats</h1>
-	<div ng-repeat="">
-		<img src="http://dummyimage.com/600x400/a0ccdb/2e2e2e.jpg">
-		<h4></h4>
-		<p></p>
-	</div>
-</a>
-<a href="/#/catalog/outerwear"><h1>outerwear</h1>
-	<div ng-repeat="">
-		<img src="http://dummyimage.com/600x400/a0ccdb/2e2e2e.jpg">
-		<h4></h4>
-		<p></p>
-	</div>
-</a>
+<div><a href="/#/home">home</a> -  <a href="/#/home/{{male}}">{{male}}</a></div>
 
-<a href="/#/catalog/tshirt"><h1>T-Shirts</h1>
-	<div ng-repeat="">
-		<img src="http://dummyimage.com/600x400/a0ccdb/2e2e2e.jpg">
-		<h4></h4>
-		<p></p>
-	</div>
-</a>
+	<a href="/#/{{male}}/coats"><h1>Coats</h1></a>
+	<a href="/#/{{male}}/coats/{{item.index}}" ng-repeat="item in viewCoats">
+		<img ng-src="http://dummyimage.com/{{item.photos[0]}}/a0ccdb/2e2e2e.jpg">
+		<h4>{{item.name}}</h4>
+		<p>{{item.price}}</p>
+	</a>
+
+	<a href="/#/{{male}}/outerwear"><h1>outerwear</h1></a>
+	<a href="/#/{{male}}/outerwear/{{item.index}}" ng-repeat="item in viewOuterwear">
+		<img ng-src="http://dummyimage.com/{{item.photos[0]}}/a0ccdb/2e2e2e.jpg">
+		<h4>{{item.name}}</h4>
+		<p>{{item.price}}</p>
+	</a>
 
 
+	<a href="/#/{{male}}/tshirt"><h1>T-Shirts</h1></a>
+	<a href="/#/{{male}}/tshirt/{{item.index}}" ng-repeat="item in viewTshirt">
+		<img ng-src="http://dummyimage.com/{{item.photos[0]}}/a0ccdb/2e2e2e.jpg">
+		<h4>{{item.name}}</h4>
+		<p>{{item.price}}</p>
+	</a>

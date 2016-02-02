@@ -8,11 +8,17 @@
 	padding: 0px;
 }
 a {
-	
+	overflow: hidden;
+	display: block;
+	text-decoration: none;
+	cursor: pointer;
 }
 li {
 	
 }
 .active-link {
 	color: red;
+}
+img {
+	max-width: 300px;
 }

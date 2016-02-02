@@ -1,1 +1,9 @@
-<h1>Data</h1>
+<div><a href="/#/home">home</a> -
+ <a href="/#/home/{{male}}">{{male}}</a> - 
+ <a href="/#/home/{{male}}/{{id}}">{{id}}</a>{{clothes}}</div>
+<a href="/#/{{male}}/{{clothes}}/{{item.index}}" ng-repeat="item in viewWear">
+		<img ng-src="http://dummyimage.com/{{item.photos[0]}}/a0ccdb/2e2e2e.jpg">
+		<h4>{{item.name}}</h4>
+		<p>{{item.price}}</p>
+	</a>
+	<a ng-click="buy()"></a>
