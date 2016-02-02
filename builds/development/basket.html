@@ -1,23 +1,26 @@
 <h1>Basket</h1>
 <div>name name name</div>
-<div>
-	<div ng-repeat="">
-		<div><img src=""></div>
+<div ng-show="basketEmpty">
+	<div ng-repeat="(key, item) in list">
+		<div><img ng-src="http://dummyimage.com/{{item.photos[0]}}/a0ccdb/2e2e2e.jpg"></div>
 		<div>
-			<h3>Name</h3>
-			<span>Art</span>
+			<h3>{{item.name}}</h3>
+			<span>{{item.artnum}}</span>
 		</div>
-		<div>Color</div>
-		<div>Size</div>
+		<div>{{color(item.color)}}</div>
+		<div>{{item.size}}</div>
 		<div>
-			<input type="text">
-			<button ng-click="">+</button>
-			<button ng-click="">-</button>
+			<input ng-model="item.quantity" type="text">
+			<button ng-click="quantity(true, item)">+</button>
+			<button ng-click="quantity(false, item)">-</button>
 		</div>
-		<div>Price</div>
-		<a href="" ng-click="">Del</a>
+		<div>{{item.price}}</div>
+		<a ng-click="delete(key)">Del</a>
 	</div>
 </div>
-Subtotal<div></div>
-<a href="" ui-sref="catalog"></a>
-<a href="" ui-sref="ordersend"></a>
+<div ng-hide="basketEmpty">
+	<h1>Basket empty</h1>
+</div>
+Subtotal<div ng-show="basketEmpty">{{subtotal()}}</div>
+<a href="/#/home/women">Continue Shoping</a>
+<a ng-show="basketEmpty" ui-sref="ordersend">Order now</a>

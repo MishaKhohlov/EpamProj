@@ -30,115 +30,117 @@
 
     function dataFact($log) {
         var data = [
-            {male: 'men', type: 'coats', name: 'Double-Layered Top1', price: 666.99, 
+            {male: 'men', type: 'coats', name: 'Double-Layered Top1', color: ['black', 'white'], price: 666.99, 
             size: [sizeСl(1), sizeСl(2), sizeСl(3), sizeСl(4)], desc: desc(), artnum: randInt(10000000000, 33333333333),
              photos: ['1200x600', '600x600', '550x700', '600x1200']},
-             {male: 'men', type: 'coats', name: 'Double-Layered Top2', price: 666.99, 
+             {male: 'men', type: 'coats', name: 'Double-Layered Top2', color: ['black', 'white'], price: 666.99, 
             size: [sizeСl(1), sizeСl(2), sizeСl(3), sizeСl(4)], desc: desc(), artnum: randInt(10000000000, 33333333333),
              photos: ['1200x600', '600x600', '550x700', '600x1200']},
-             {male: 'men', type: 'coats', name: 'Double-Layered Top3', price: 666.99, 
+             {male: 'men', type: 'coats', name: 'Double-Layered Top3', color: ['black', 'white'], price: 666.99, 
             size: [sizeСl(1), sizeСl(2), sizeСl(3), sizeСl(4)], desc: desc(), artnum: randInt(10000000000, 33333333333),
              photos: ['1200x600', '600x600', '550x700', '600x1200']},
-             {male: 'men', type: 'coats', name: 'Double-Layered Top4', price: 666.99, 
+             {male: 'men', type: 'coats', name: 'Double-Layered Top4', color: ['black', 'white'], price: 666.99, 
             size: [sizeСl(1), sizeСl(2), sizeСl(3), sizeСl(4)], desc: desc(), artnum: randInt(10000000000, 33333333333),
              photos: ['1200x600', '600x600', '550x700', '600x1200']},
-             {male: 'men', type: 'outerwear', name: 'Double-Layered Top5', price: 666.99, 
+             {male: 'men', type: 'outerwear', name: 'Double-Layered Top5', color: ['black', 'white'], price: 666.99, 
             size: [sizeСl(1), sizeСl(2), sizeСl(3), sizeСl(4)], desc: desc(), artnum: randInt(10000000000, 33333333333),
              photos: ['1200x600', '600x600', '550x700', '600x1200']},
-             {male: 'men', type: 'outerwear', name: 'Double-Layered Top6', price: 666.99, 
+             {male: 'men', type: 'outerwear', name: 'Double-Layered Top6', color: ['black', 'white'], price: 666.99, 
             size: [sizeСl(1), sizeСl(2), sizeСl(3), sizeСl(4)], desc: desc(), artnum: randInt(10000000000, 33333333333),
              photos: ['1200x600', '600x600', '550x700', '600x1200']},
-             {male: 'men', type: 'outerwear', name: 'Double-Layered Top7', price: 666.99, 
+             {male: 'men', type: 'outerwear', name: 'Double-Layered Top7', color: ['black', 'white'], price: 666.99, 
             size: [sizeСl(1), sizeСl(2), sizeСl(3), sizeСl(4)], desc: desc(), artnum: randInt(10000000000, 33333333333),
              photos: ['1200x600', '600x600', '550x700', '600x1200']},
-             {male: 'men', type: 'outerwear', name: 'Double-Layered Top8', price: 666.99, 
+             {male: 'men', type: 'outerwear', name: 'Double-Layered Top8', color: ['black', 'white'], price: 666.99, 
             size: [sizeСl(1), sizeСl(2), sizeСl(3), sizeСl(4)], desc: desc(), artnum: randInt(10000000000, 33333333333),
              photos: ['1200x600', '600x600', '550x700', '600x1200']},
-              {male: 'men', type: 'tshirt', name: 'Double-Layered Top9', price: 666.99, 
+              {male: 'men', type: 'tshirt', name: 'Double-Layered Top9', color: ['black', 'white'], price: 666.99, 
             size: [sizeСl(1), sizeСl(2), sizeСl(3), sizeСl(4)], desc: desc(), artnum: randInt(10000000000, 33333333333),
              photos: ['1200x600', '600x600', '550x700', '600x1200']},
-             {male: 'men', type: 'tshirt', name: 'Double-Layered Top10', price: 666.99, 
+             {male: 'men', type: 'tshirt', name: 'Double-Layered Top10', color: ['black', 'white'], price: 666.99, 
             size: [sizeСl(1), sizeСl(2), sizeСl(3), sizeСl(4)], desc: desc(), artnum: randInt(10000000000, 33333333333),
              photos: ['1200x600', '600x600', '550x700', '600x1200']},
-             {male: 'men', type: 'tshirt', name: 'Double-Layered Top11', price: 666.99, 
+             {male: 'men', type: 'tshirt', name: 'Double-Layered Top11', color: ['black', 'white'], price: 666.99, 
             size: [sizeСl(1), sizeСl(2), sizeСl(3), sizeСl(4)], desc: desc(), artnum: randInt(10000000000, 33333333333),
              photos: ['1200x600', '600x600', '550x700', '600x1200']},
-             {male: 'men', type: 'tshirt', name: 'Double-Layered Top12', price: 666.99, 
+             {male: 'men', type: 'tshirt', name: 'Double-Layered Top12', color: ['black', 'white'], price: 666.99, 
             size: [sizeСl(1), sizeСl(2), sizeСl(3), sizeСl(4)], desc: desc(), artnum: randInt(10000000000, 33333333333),
              photos: ['1200x600', '600x600', '550x700', '600x1200']},
-             {male: 'women', type: 'coats', name: 'Double-Layered Top1', price: 666.99, 
+             {male: 'women', type: 'coats', name: 'Double-Layered Top1', color: ['black', 'white'], price: 666.99, 
             size: [sizeСl(1), sizeСl(2), sizeСl(3), sizeСl(4)], desc: desc(), artnum: randInt(10000000000, 33333333333),
              photos: ['1200x600', '600x600', '550x700', '600x1200']},
-             {male: 'women', type: 'coats', name: 'Double-Layered Top2', price: 666.99, 
+             {male: 'women', type: 'coats', name: 'Double-Layered Top2', color: ['black', 'white'], price: 666.99, 
             size: [sizeСl(1), sizeСl(2), sizeСl(3), sizeСl(4)], desc: desc(), artnum: randInt(10000000000, 33333333333),
              photos: ['1200x600', '600x600', '550x700', '600x1200']},
-             {male: 'women', type: 'coats', name: 'Double-Layered Top3', price: 666.99, 
+             {male: 'women', type: 'coats', name: 'Double-Layered Top3', color: ['black', 'white'], price: 666.99, 
             size: [sizeСl(1), sizeСl(2), sizeСl(3), sizeСl(4)], desc: desc(), artnum: randInt(10000000000, 33333333333),
              photos: ['1200x600', '600x600', '550x700', '600x1200']},
-             {male: 'women', type: 'coats', name: 'Double-Layered Top4', price: 666.99, 
+             {male: 'women', type: 'coats', name: 'Double-Layered Top4', color: ['black', 'white'], price: 666.99, 
             size: [sizeСl(1), sizeСl(2), sizeСl(3), sizeСl(4)], desc: desc(), artnum: randInt(10000000000, 33333333333),
              photos: ['1200x600', '600x600', '550x700', '600x1200']},
-             {male: 'women', type: 'outerwear', name: 'Double-Layered Top5', price: 666.99, 
+             {male: 'women', type: 'outerwear', name: 'Double-Layered Top5', color: ['black', 'white'], price: 666.99, 
             size: [sizeСl(1), sizeСl(2), sizeСl(3), sizeСl(4)], desc: desc(), artnum: randInt(10000000000, 33333333333),
              photos: ['1200x600', '600x600', '550x700', '600x1200']},
-             {male: 'women', type: 'outerwear', name: 'Double-Layered Top6', price: 666.99, 
+             {male: 'women', type: 'outerwear', name: 'Double-Layered Top6', color: ['green', 'blue'], price: 666.99, 
             size: [sizeСl(1), sizeСl(2), sizeСl(3), sizeСl(4)], desc: desc(), artnum: randInt(10000000000, 33333333333),
              photos: ['1200x600', '600x600', '550x700', '600x1200']},
-             {male: 'women', type: 'outerwear', name: 'Double-Layered Top7', price: 666.99, 
+             {male: 'women', type: 'outerwear', name: 'Double-Layered Top7', color: ['green', 'blue'], price: 666.99, 
             size: [sizeСl(1), sizeСl(2), sizeСl(3), sizeСl(4)], desc: desc(), artnum: randInt(10000000000, 33333333333),
              photos: ['1200x600', '600x600', '550x700', '600x1200']},
-             {male: 'women', type: 'outerwear', name: 'Double-Layered Top8', price: 666.99, 
+             {male: 'women', type: 'outerwear', name: 'Double-Layered Top8', color: ['green', 'blue'], price: 666.99, 
             size: [sizeСl(1), sizeСl(2), sizeСl(3), sizeСl(4)], desc: desc(), artnum: randInt(10000000000, 33333333333),
              photos: ['1200x600', '600x600', '550x700', '600x1200']},
-              {male: 'women', type: 'tshirt', name: 'Double-Layered Top9', price: 666.99, 
+              {male: 'women', type: 'tshirt', name: 'Double-Layered Top9', color: ['green', 'blue'], price: 666.99, 
             size: [sizeСl(1), sizeСl(2), sizeСl(3), sizeСl(4)], desc: desc(), artnum: randInt(10000000000, 33333333333),
              photos: ['1200x600', '600x600', '550x700', '600x1200']},
-             {male: 'women', type: 'tshirt', name: 'Double-Layered Top10', price: 666.99, 
+             {male: 'women', type: 'tshirt', name: 'Double-Layered Top10', color: ['green', 'blue'], price: 666.99, 
             size: [sizeСl(1), sizeСl(2), sizeСl(3), sizeСl(4)], desc: desc(), artnum: randInt(10000000000, 33333333333),
              photos: ['1200x600', '600x600', '550x700', '600x1200']},
-             {male: 'women', type: 'tshirt', name: 'Double-Layered Top11', price: 666.99, 
+             {male: 'women', type: 'tshirt', name: 'Double-Layered Top11', color: ['green', 'blue'], price: 666.99, 
             size: [sizeСl(1), sizeСl(2), sizeСl(3), sizeСl(4)], desc: desc(), artnum: randInt(10000000000, 33333333333),
              photos: ['1200x600', '600x600', '550x700', '600x1200']},
-             {male: 'women', type: 'tshirt', name: 'Double-Layered Top12', price: 666.99, 
+             {male: 'women', type: 'tshirt', name: 'Double-Layered Top12', color: [], price: 666.99, 
             size: [sizeСl(1), sizeСl(2), sizeСl(3), sizeСl(4)], desc: desc(), artnum: randInt(10000000000, 33333333333),
              photos: ['1200x600', '600x600', '550x700', '600x1200']},
-              {male: 'kids', type: 'coats', name: 'Double-Layered Top1', price: 666.99, 
+              {male: 'kids', type: 'coats', name: 'Double-Layered Top1', color: [], price: 666.99, 
             size: [sizeСl(1), sizeСl(2), sizeСl(3), sizeСl(4)], desc: desc(), artnum: randInt(10000000000, 33333333333),
              photos: ['1200x600', '600x600', '550x700', '600x1200']},
-             {male: 'kids', type: 'coats', name: 'Double-Layered Top2', price: 666.99, 
+             {male: 'kids', type: 'coats', name: 'Double-Layered Top2', color: [], price: 666.99, 
             size: [sizeСl(1), sizeСl(2), sizeСl(3), sizeСl(4)], desc: desc(), artnum: randInt(10000000000, 33333333333),
              photos: ['1200x600', '600x600', '550x700', '600x1200']},
-             {male: 'kids', type: 'coats', name: 'Double-Layered Top3', price: 666.99, 
+             {male: 'kids', type: 'coats', name: 'Double-Layered Top3', color: [], price: 666.99, 
             size: [sizeСl(1), sizeСl(2), sizeСl(3), sizeСl(4)], desc: desc(), artnum: randInt(10000000000, 33333333333),
              photos: ['1200x600', '600x600', '550x700', '600x1200']},
-             {male: 'kids', type: 'coats', name: 'Double-Layered Top4', price: 666.99, 
+             {male: 'kids', type: 'coats', name: 'Double-Layered Top4', color: [], price: 666.99, 
             size: [sizeСl(1), sizeСl(2), sizeСl(3), sizeСl(4)], desc: desc(), artnum: randInt(10000000000, 33333333333),
              photos: ['1200x600', '600x600', '550x700', '600x1200']},
-             {male: 'kids', type: 'outerwear', name: 'Double-Layered Top5', price: 666.99, 
+             {male: 'kids', type: 'outerwear', name: 'Double-Layered Top5', color: [], price: 666.99, 
             size: [sizeСl(1), sizeСl(2), sizeСl(3), sizeСl(4)], desc: desc(), artnum: randInt(10000000000, 33333333333),
              photos: ['1200x600', '600x600', '550x700', '600x1200']},
-             {male: 'kids', type: 'outerwear', name: 'Double-Layered Top6', price: 666.99, 
+             {male: 'kids', type: 'outerwear', name: 'Double-Layered Top6', color: [], price: 666.99, 
             size: [sizeСl(1), sizeСl(2), sizeСl(3), sizeСl(4)], desc: desc(), artnum: randInt(10000000000, 33333333333),
              photos: ['1200x600', '600x600', '550x700', '600x1200']},
-             {male: 'kids', type: 'outerwear', name: 'Double-Layered Top7', price: 666.99, 
+             {male: 'kids', type: 'outerwear', name: 'Double-Layered Top7', color: [], price: 666.99, 
             size: [sizeСl(1), sizeСl(2), sizeСl(3), sizeСl(4)], desc: desc(), artnum: randInt(10000000000, 33333333333),
              photos: ['1200x600', '600x600', '550x700', '600x1200']},
-             {male: 'kids', type: 'outerwear', name: 'Double-Layered Top8', price: 666.99, 
+             {male: 'kids', type: 'outerwear', name: 'Double-Layered Top8', color: [], price: 666.99, 
             size: [sizeСl(1), sizeСl(2), sizeСl(3), sizeСl(4)], desc: desc(), artnum: randInt(10000000000, 33333333333),
              photos: ['1200x600', '600x600', '550x700', '600x1200']},
-              {male: 'kids', type: 'tshirt', name: 'Double-Layered Top9', price: 666.99, 
+              {male: 'kids', type: 'tshirt', name: 'Double-Layered Top9', color: [], price: 666.99, 
             size: [sizeСl(1), sizeСl(2), sizeСl(3), sizeСl(4)], desc: desc(), artnum: randInt(10000000000, 33333333333),
              photos: ['1200x600', '600x600', '550x700', '600x1200']},
-             {male: 'kids', type: 'tshirt', name: 'Double-Layered Top10', price: 666.99, 
+             {male: 'kids', type: 'tshirt', name: 'Double-Layered Top10', color: [], price: 666.99, 
             size: [sizeСl(1), sizeСl(2), sizeСl(3), sizeСl(4)], desc: desc(), artnum: randInt(10000000000, 33333333333),
              photos: ['1200x600', '600x600', '550x700', '600x1200']},
-             {male: 'kids', type: 'tshirt', name: 'Double-Layered Top11', price: 666.99, 
+             {male: 'kids', type: 'tshirt', name: 'Double-Layered Top11', color: [], price: 666.99, 
             size: [sizeСl(1), sizeСl(2), sizeСl(3), sizeСl(4)], desc: desc(), artnum: randInt(10000000000, 33333333333),
              photos: ['1200x600', '600x600', '550x700', '600x1200']},
-             {male: 'kids', type: 'tshirt', name: 'Double-Layered Top12', price: 666.99, 
+             {male: 'kids', type: 'tshirt', name: 'Double-Layered Top12', color: [], price: 666.99, 
             size: [sizeСl(1), sizeСl(2), sizeСl(3), sizeСl(4)], desc: desc(), artnum: randInt(10000000000, 33333333333),
              photos: ['1200x600', '600x600', '550x700', '600x1200']}
         ];
+        var cash;
+        var cashIndex = -1;
         var orderArr = [];
         function sizeСl(num) {
                 switch (num) {
@@ -198,18 +200,20 @@
             return data[index];
         },
         setItem: function(index) {
-            if(orderArr[index]) {
-                ++orderArr[index].quantity;
+            if(cash == index) {
+                ++orderArr[cashIndex].quantity;
             } else {
                  data[index].quantity = 1;
                  orderArr.push(data[index]);
+                 ++cashIndex;
             }
+            cash = index;
             $log.log(orderArr);
         },
         getOrder: function() {
-            if(orderArr[[0]]) {
+           if(orderArr[[0]]) {
                 return orderArr;
-            }
+           } 
         }
     };
         return publickObj;
@@ -326,9 +330,50 @@
         .config(basketConf)
         .controller('basketCtrl', basketCtrl);
 
-    function basketCtrl ($scope, $log, $state) {
+    function basketCtrl ($scope, $log, $state, dataFact) {
         $log.debug("basket controller star");
-               
+            $scope.list = dataFact.getOrder();
+
+            if($scope.list) {
+               $scope.basketEmpty = true; 
+               starBasket();
+            } else {
+                $scope.basketEmpty = false; 
+            }
+
+            function starBasket() {
+                $scope.delete = function(index) {
+                    $scope.list.splice(index, 1);
+                };
+                $scope.quantity = function(arg, item) {
+                    if(arg) {
+                        $log.log(item);
+                        ++item.quantity;
+                    } else {
+                        if(item.quantity > 1) {
+                            --item.quantity;
+                        }
+                    }
+                };
+                $scope.color = function(colorArr) {
+                    if(colorArr.length !== 0) {
+                        return colorArr[0];
+                    } else {
+                        return 'One color';
+                    }
+                };
+                $scope.subtotal = function() {
+                     var res = 0;  
+                     angular.forEach($scope.list, function(value, key) {
+                        if(value.quantity == 1) {
+                            res += value.price;
+                        } else {
+                            res += value.price*value.quantity;
+                        }
+                    }); 
+                     return res;
+                };
+            }
         $log.debug("basket controller finish");
     }
 
