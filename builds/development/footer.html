@@ -1,6 +1,9 @@
-<h1>footer</h1>
-<div>
+<div ng-controller="mainCtrl">
+	<h1>footer</h1>
 	<div>
-		<!-- <img ng-repeat="" src="http://dummyimage.com/200x200/a0ccdb/2e2e2e.jpg"> -->
+		<div>
+			<img ng-repeat="item in lookBook" ng-src="http://dummyimage.com/{{item}}/a0ccdb/2e2e2e.jpg">
+			
+		</div>
 	</div>
 </div>

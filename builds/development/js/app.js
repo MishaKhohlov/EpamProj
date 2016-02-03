@@ -3,9 +3,14 @@
 	"use strict";
 
 	angular.module('ngApp', ['ui.router', 'ngHeader', 'ngCategoryAll',
-         'ngDataAbout', 'ngBasket', 'ngOrderSend', 'ngData', 'ngDataFactory', 'ngAnimate', 'ngResource'])
+         'ngDataAbout', 'ngBasket', 'ngOrderSend', 'ngData', 'ngDataFactory', 'ngAnimate', 'ngStorage'])
+        .controller('mainCtrl', mainCtrl)
         .config(appConfig);
-
+    function mainCtrl($scope, $log, dataFact) {
+        $log.debug('main cntrl start');
+            $scope.lookBook = dataFact.dataImage();
+        $log.debug('main cntrl finish');
+    }
     function appConfig($stateProvider, $urlRouterProvider, $locationProvider){
         $urlRouterProvider.otherwise('/home');
         // убирает решётку 
@@ -17,7 +22,8 @@
         $stateProvider
             .state('home', {
                 url: '/home',
-                templateUrl: 'home.html'
+                templateUrl: 'home.html',
+                controller: 'mainCtrl'
                 });
             }
 })();
@@ -28,7 +34,7 @@
     angular.module('ngDataFactory', [])
     .factory('dataFact', dataFact);
 
-    function dataFact($log) {
+    function dataFact($log, $rootScope) {
         var data = [
             {male: 'men', type: 'coats', name: 'Double-Layered Top1', color: ['black', 'white'], price: 666.99, 
             size: [sizeСl(1), sizeСl(2), sizeСl(3), sizeСl(4)], desc: desc(), artnum: randInt(10000000000, 33333333333),
@@ -139,6 +145,9 @@
             size: [sizeСl(1), sizeСl(2), sizeСl(3), sizeСl(4)], desc: desc(), artnum: randInt(10000000000, 33333333333),
              photos: ['1200x600', '600x600', '550x700', '600x1200']}
         ];
+        var dataImage = ['200x121','200x122','200x123','200x124','200x125','200x126','200x127',
+        '200x128','200x129','200x130','200x131'];
+
         var cash;
         var cashIndex = -1;
         var orderArr = [];
@@ -163,10 +172,12 @@
           rand = Math.round(rand);
           return rand;
         }
-        
         var publickObj = {
             data: function() {
                 return data;
+            }, 
+            dataImage: function() {
+                return dataImage;
             }, 
             dataParse: function(male, type) {
                 var coats = []; 
@@ -208,7 +219,15 @@
                  ++cashIndex;
             }
             cash = index;
+            publickObj.count();
             $log.log(orderArr);
+        },
+        count: function() {
+             if(orderArr[[0]]) {
+                $rootScope.count = orderArr.length;
+            } else {
+                $rootScope.count = 0;
+            }
         },
         getOrder: function() {
            if(orderArr[[0]]) {
@@ -226,9 +245,14 @@
     angular.module('ngHeader', [])
         .controller('headerCtrl', headerCtrl);
 
-    function headerCtrl ($scope, $log, dataFact) {
+    function headerCtrl ($scope, $log, dataFact, $rootScope) {
         $log.debug("Headeer controller star");
-          //  $log.log(dataFact.data());
+            $rootScope.count = 0;          
+            $scope.searchInp = function() {
+                $log.log($scope.search);
+            }
+
+
         $log.debug("Header controller finish");
     }
 })();
@@ -259,7 +283,9 @@
                     url: '/home/:male',
                     templateUrl: 'categoryAll.html',
                     controller: 'categoryAllCtrl'
-                });
+        
+            });
+        
     }
 })();
 //---------------------------------------ngData-----------------------------------------
@@ -284,7 +310,7 @@
     function dataConf($stateProvider){
         $stateProvider
             .state('data', {
-                url: '/:male/:clothes',
+                url: '/home/:male/:clothes',
                 templateUrl: 'data.html',
                 controller: 'dataCtrl'
             });
@@ -298,14 +324,16 @@
         .config(aboutConf)
         .controller('aboutCtrl', aboutCtrl);
 
-    function aboutCtrl ($scope, $log, $state, dataFact) {
+    function aboutCtrl ($scope, $log, $state, dataFact, $sessionStorage) {
         $log.debug("dataAbout controller star");
               $scope.clothes = $state.params.clothes;
               $scope.male = $state.params.male;
               $scope.id = $state.params.id;
+              var lastObj = {clothes: $scope.clothes, male: $scope.male};
               $scope.things = dataFact.dataThingAbout($scope.id);
 
               $scope.buy = function() {
+                    $sessionStorage.lastObj = lastObj;
                     dataFact.setItem($scope.id);
               };
 
@@ -316,7 +344,7 @@
     function aboutConf($stateProvider){
         $stateProvider
             .state('dataAbout', {
-                url: '/:male/:clothes/:id',
+                url: '/home/:male/:clothes/:id',
                 templateUrl: 'data.about.html',
                 controller: 'aboutCtrl'
             });
@@ -330,30 +358,43 @@
         .config(basketConf)
         .controller('basketCtrl', basketCtrl);
 
-    function basketCtrl ($scope, $log, $state, dataFact) {
+    function basketCtrl ($scope, $log, $state, dataFact, $sessionStorage) {
         $log.debug("basket controller star");
             $scope.list = dataFact.getOrder();
 
-            if($scope.list) {
-               $scope.basketEmpty = true; 
-               starBasket();
+            if($sessionStorage.lastObj) {
+                 $scope.clothes = $sessionStorage.lastObj.clothes;
+                 $scope.male = $sessionStorage.lastObj.male;
             } else {
-                $scope.basketEmpty = false; 
+                $scope.male = 'women';
             }
-
+            function start() {
+                if($scope.list) {
+                   $scope.basketEmpty = true; 
+                   starBasket();
+                } else {
+                    delete $sessionStorage.lastObj;
+                    $scope.basketEmpty = false; 
+                }
+            }
+            start();
             function starBasket() {
-                $scope.delete = function(index) {
-                    $scope.list.splice(index, 1);
-                };
-                $scope.quantity = function(arg, item) {
-                    if(arg) {
-                        $log.log(item);
-                        ++item.quantity;
-                    } else {
-                        if(item.quantity > 1) {
-                            --item.quantity;
-                        }
+                $scope.delete = function(key) {
+                    $scope.list.splice(key, 1);
+                    dataFact.count();
+                    if(!$scope.list[0]){
+                        $scope.list = null;
+                        start();
                     }
+                };
+                $scope.quantity = function(arg, key) {
+                    if(arg) {
+                        ++$scope.list[key].quantity;
+                    } else {
+                        if($scope.list[key].quantity > 1) {
+                        --$scope.list[key].quantity;
+                        }
+                    } 
                 };
                 $scope.color = function(colorArr) {
                     if(colorArr.length !== 0) {

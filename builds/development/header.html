@@ -5,9 +5,9 @@
 	<a href="/#/home/men">Men</a>
 	<a href="/#/home/kids">Kids</a>
 	<a href="/#/home/cominsoon">Coming Soon</a>
-	<input type="text" ng-model="search">
+	<input type="text" ng-model="search" ng-change="searchInp()">
 	<div class=""></div>  
-	<a ui-sref="basket" ui-sref-active="active-link">Basket</a>
+	<a ui-sref="basket" ui-sref-active="active-link">Basket</a><div>{{count}}</div>
 	<div></div>
 	<!-- <a ui-sref="ordersend" ui-sref-active="active-link">Заказ Выполнен</a> -->
 	<!-- <a href="/#/catalog/shooes/gost">Наименование</a><br>

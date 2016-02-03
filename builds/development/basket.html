@@ -1,4 +1,9 @@
 <h1>Basket</h1>
+<div>
+	<div><a href="/#/home">home</a> -
+ 	<a href="/#/home/{{male}}">{{male}}12</a> - 
+ 	<a ng-show="basketEmpty" href="/#/home/{{male}}/{{clothes}}">{{clothes}}</a>
+</div>
 <div>name name name</div>
 <div ng-show="basketEmpty">
 	<div ng-repeat="(key, item) in list">
@@ -11,8 +16,8 @@
 		<div>{{item.size}}</div>
 		<div>
 			<input ng-model="item.quantity" type="text">
-			<button ng-click="quantity(true, item)">+</button>
-			<button ng-click="quantity(false, item)">-</button>
+			<button ng-click="quantity(true, key)">+</button>
+			<button ng-click="quantity(false, key)">-</button>
 		</div>
 		<div>{{item.price}}</div>
 		<a ng-click="delete(key)">Del</a>
@@ -22,5 +27,6 @@
 	<h1>Basket empty</h1>
 </div>
 Subtotal<div ng-show="basketEmpty">{{subtotal()}}</div>
-<a href="/#/home/women">Continue Shoping</a>
+
+<a href="/#/home/{{male}}/{{clothes}}">Continue Shoping</a>
 <a ng-show="basketEmpty" ui-sref="ordersend">Order now</a>
