@@ -22,3 +22,12 @@ li {
 img {
 	max-width: 300px;
 }
+.activeSearch {
+	
+}
+.seacrhToggle {
+	border: 1px solid red;
+	overflow: scroll;
+	height: 400px;
+	width: 350px;
+}

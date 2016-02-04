@@ -1,2 +1,9 @@
 <h1>Home page</h1>
 <div></div>
+<form name="formEmail">
+	 <input type="text" ng-model="emailOr" name="input" ng-pattern="emailReg" /><br>
+</form>
+<div ng-if="emailSended">Thanks You</div>
+<div ng-if="emailWrong">Wrong email</div>
+
+  <button ng-click="emailSend()">Send</button>

@@ -5,8 +5,15 @@
 	<a href="/#/home/men">Men</a>
 	<a href="/#/home/kids">Kids</a>
 	<a href="/#/home/cominsoon">Coming Soon</a>
-	<input type="text" ng-model="search" ng-change="searchInp()">
-	<div class=""></div>  
+	<input type="text" ng-blur="blurInp()" ng-show="openSearch" ng-model="search.name" ng-change="searchInp()">
+	<div ng-click="openSearch ? openSearch = false : openSearch = true" class="">open seacrh</div>  
+	<div class="seacrhToggle" ng-show="activeSearch">
+		<a ng-repeat="(key, item) in data | filter:search" href="/#/home/{{item.male}}/{{item.type}}/{{key}}">
+		<img ng-src="http://dummyimage.com/{{item.photos[0]}}/a0ccdb/2e2e2e.jpg">
+		<h4>{{item.name}}</h4>
+		<p>{{item.price}}</p>
+		</a>
+	</div>
 	<a ui-sref="basket" ui-sref-active="active-link">Basket</a><div>{{count}}</div>
 	<div></div>
 	<!-- <a ui-sref="ordersend" ui-sref-active="active-link">Заказ Выполнен</a> -->

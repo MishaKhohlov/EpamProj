@@ -6,9 +6,25 @@
          'ngDataAbout', 'ngBasket', 'ngOrderSend', 'ngData', 'ngDataFactory', 'ngAnimate', 'ngStorage'])
         .controller('mainCtrl', mainCtrl)
         .config(appConfig);
-    function mainCtrl($scope, $log, dataFact) {
+    function mainCtrl($scope, $log, dataFact, $timeout) {
         $log.debug('main cntrl start');
             $scope.lookBook = dataFact.dataImage();
+            $scope.emailReg = '\^[-._a-z0-9]+@(?:[a-z0-9][-a-z0-9]+\.)+[a-z]{2,6}$';
+
+            $scope.emailSend = function() {
+                if($scope.formEmail.input.$valid) {
+                     $scope.emailWrong = false;
+                    $scope.emailSended = true;
+                    $timeout(function(){
+                        $scope.emailSended = false;
+                    }, 3000);
+                    // data 
+                    // $scope.emailOr; 
+                } else {
+                    $scope.emailWrong = true;
+                }
+            };
+           
         $log.debug('main cntrl finish');
     }
     function appConfig($stateProvider, $urlRouterProvider, $locationProvider){
@@ -18,7 +34,8 @@
          // enabled: true,
          // requireBase: false
          // });
-
+        // var 
+        // emailReg.test(email)
         $stateProvider
             .state('home', {
                 url: '/home',
@@ -229,10 +246,10 @@
                 $rootScope.count = 0;
             }
         },
-        getOrder: function() {
-           if(orderArr[[0]]) {
-                return orderArr;
-           } 
+        search: function(model) {
+            angular.forEach(data, function(value, key) {
+                     
+                }); 
         }
     };
         return publickObj;
@@ -247,10 +264,22 @@
 
     function headerCtrl ($scope, $log, dataFact, $rootScope) {
         $log.debug("Headeer controller star");
-            $rootScope.count = 0;          
+            $rootScope.count = 0; 
+            $scope.activeSearch = false;
+            $scope.data = dataFact.data();
+
+            $scope.blurInp = function() {
+                $scope.activeSearch = false;
+                $scope.search = null;
+            };
             $scope.searchInp = function() {
                 $log.log($scope.search);
-            }
+                if($scope.search.name !== '') {
+                    $scope.activeSearch = true;
+                } else {
+                    $scope.activeSearch = false;
+                }
+            };
 
 
         $log.debug("Header controller finish");
