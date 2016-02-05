@@ -2,19 +2,209 @@
 @import 'header.css';
 @import 'home.css';
 @import 'footer.css';
+/*------------------------------fonts-------------------------------------------*/
+@font-face {
+    font-family: 'latoBold';
+    src: local('Lato Bold'), local('LatoBold'), url('../fonts/lato-bold-webfont.eot');
+    src: local('Lato Bold'), local('LatoBold'), url('../fonts/lato-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/lato-bold-webfont.woff2') format('woff2'),
+         url('../fonts/lato-bold-webfont.woff') format('woff'),
+         url('../fonts/lato-bold-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 
+}
+
+@font-face {
+    font-family: 'latoItalic';
+    src: local('Lato Italic'), local('LatoItalic'), url('../fonts/lato-italic-webfont.eot');
+    src:  local('Lato Italic'), local('LatoItalic'), url('../fonts/lato-italic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/lato-italic-webfont.woff2') format('woff2'),
+         url('../fonts/lato-italic-webfont.woff') format('woff'),
+         url('../fonts/lato-italic-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'latoRegular';
+    src: local('Lato Regular'), local('LatoRegular'),  local('Lato'), url('../fonts/lato-regular-webfont.eot');
+    src: local('Lato Regular'), local('LatoRegular'), local('Lato'), url('../fonts/lato-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/lato-regular-webfont.woff2') format('woff2'),
+         url('../fonts/lato-regular-webfont.woff') format('woff'),
+         url('../fonts/lato-regular-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+/*------------------------------sprite------------------------------------------*/
+.sprite {
+    background-image: url('../img/spritesheet.png');
+    background-repeat: no-repeat;
+    display: block;
+}
+
+.sprite-basket {
+    width: 17px;
+    height: 17px;
+    background-position: -10px -10px;
+}
+
+.sprite-fc {
+    width: 8px;
+    height: 15px;
+    background-position: -10px -47px;
+}
+
+.sprite-fcH {
+    width: 8px;
+    height: 15px;
+    background-position: -10px -82px;
+}
+
+.sprite-inst {
+    width: 16px;
+    height: 15px;
+    background-position: -10px -117px;
+}
+
+.sprite-instH {
+    width: 16px;
+    height: 15px;
+    background-position: -10px -152px;
+}
+
+.sprite-rightGo {
+    width: 5px;
+    height: 6px;
+    background-position: -10px -187px;
+}
+
+.sprite-search {
+    width: 16px;
+    height: 16px;
+    background-position: -10px -213px;
+}
+
+.sprite-searchH {
+    width: 16px;
+    height: 16px;
+    background-position: -10px -249px;
+}
+
+.sprite-sliderCntrl {
+    width: 17px;
+    height: 33px;
+    background-position: -10px -285px;
+}
+
+.sprite-tw {
+    width: 16px;
+    height: 13px;
+    background-position: -10px -338px;
+}
+
+.sprite-twH {
+    width: 16px;
+    height: 13px;
+    background-position: -10px -371px;
+}
+
+.sprite-user {
+    width: 11px;
+    height: 17px;
+    background-position: -10px -404px;
+}
+/*------------------------------perem-------------------------------------------*/
 * {
+	font-family: 'latoRegular';
+	font-size: 14px;
+	line-height: 17px;
 	margin: 0px;
 	padding: 0px;
 }
+h1 {
+	font-size: 69px;
+	line-height: 15px;
+}
+h2 {
+	font-family: 'latoBold';
+	font-size: 34px;
+	line-height: 1.16;
+}
+.subHeader {
+	font-family: 'Georgia';
+	font-style: italic;
+	font-size: 24px;
+	line-height: 1.45;
+}
+.subHeaderMin {
+	font-family: 'Georgia';
+	font-style: italic;
+	font-size: 18px;
+	line-height: 1.45;
+}
+.mainMenu {
+	font-family: 'latoRegular';
+	font-size: 14px;
+	line-height: 1;
+}
+.smallText {
+	font-family: 'latoRegular';
+	font-size: 12px;
+	line-height: 1;
+}
+a.button {
+	font-size: 14px;
+}
+h3 {
+    font-family: 'latoBold'; 
+    line-height: 1;
+}
 a {
-	overflow: hidden;
+	font-family: 'latoRegular';
+	font-size: 16px;
 	display: block;
 	text-decoration: none;
 	cursor: pointer;
 }
+a:hover {
+	text-decoration: underline;
+}
+.linkBig {
+	width: 230px;
+	height: 58px;
+}
+.linkMed {
+	width: 200px;
+	height: 55px;
+}
+.linkSmall {
+	width: 174px;
+	height: 53px;
+}
+.orange {
+	background: #e67429;
+}
+.orangeL {
+	background: #f68236;
+}
+.greyB {
+	background: #303030;
+}
+.greyM {
+	background: #606060;
+}
+.greyL {
+	background: #a3a3a3;
+}
+.greyW {
+	background: #e5e5e5;
+}
+
 li {
-	
+	list-style: none;
 }
 .active-link {
 	color: red;

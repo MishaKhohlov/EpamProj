@@ -51,7 +51,7 @@ var gulp = require('gulp'),
 
 gulp.task('watch', function() {
   gulp.watch('builds/development/js/**/*.js');
-  gulp.watch('builds/development/css/**/*.css');
+  // gulp.watch('builds/development/css/**/*.css');
   gulp.watch('builds/development/*.html');
   // gulp.watch('builds/development/img/**/*', ['img']);
 });
