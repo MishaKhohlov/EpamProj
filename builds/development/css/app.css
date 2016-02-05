@@ -123,6 +123,7 @@
 	line-height: 17px;
 	margin: 0px;
 	padding: 0px;
+	color: black;
 }
 h1 {
 	font-size: 69px;
@@ -202,12 +203,11 @@ a:hover {
 .greyW {
 	background: #e5e5e5;
 }
-
 li {
 	list-style: none;
 }
-.active-link {
-	color: red;
+body {
+	background: #e5e5e5;
 }
 img {
 	max-width: 300px;
@@ -220,4 +220,11 @@ img {
 	overflow: scroll;
 	height: 400px;
 	width: 350px;
+}
+header, main, footer {
+	max-width: 1150px;
+	min-width: 414px;
+	margin: 0 auto;
+	background: white;
+	overflow: hidden;
 }

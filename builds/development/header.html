@@ -1,21 +1,31 @@
-<div class="slider" ng-controller="headerCtrl">
-	<h1>header</h1>
-	<a ui-sref="home" ui-sref-active="active-link">SH</a>
-	<a href="/#/home/women">Women</a>
-	<a href="/#/home/men">Men</a>
-	<a href="/#/home/kids">Kids</a>
-	<a href="/#/home/cominsoon">Coming Soon</a>
-	<input type="text" ng-blur="blurInp()" ng-show="openSearch" ng-model="search.name" ng-change="searchInp()">
-	<div ng-click="openSearch ? openSearch = false : openSearch = true" class="">open seacrh</div>  
-	<div class="seacrhToggle" ng-show="activeSearch">
-		<a ng-repeat="(key, item) in data | filter:search" href="/#/home/{{item.male}}/{{item.type}}/{{key}}">
-		<img ng-src="http://dummyimage.com/{{item.photos[0]}}/a0ccdb/2e2e2e.jpg">
-		<h4>{{item.name}}</h4>
-		<p>{{item.price}}</p>
-		</a>
+<div class="header" ng-controller="headerCtrl">
+	<div class="header_leftCol">
+		<a class="header_leftCol_logo" ui-sref="home" ui-sref-active="active-link"><h1>SH</h1></a>
+		<div class="header_leftCol_menu">
+			<a href="/#/home/women">Woman</a>
+			<a href="/#/home/men">Men</a>
+			<a href="/#/home/kids">Kids</a>
+			<a href="/#/home/cominsoon">Coming Soon</a>
+			<a href="/#/home/cominsoon">About</a>
+		</div>
 	</div>
-	<a ui-sref="basket" ui-sref-active="active-link">Basket</a><div>{{count}}</div>
-	<div></div>
+	<div class="header_rightCol">
+		<input class="header_rightCol_search smallText" placeholder="Search something..." type="text" ng-blur="blurInp()" ng-show="openSearch" ng-model="search.name" ng-change="searchInp()">
+		<div class="header_rightCol_search_cont" ng-click="openSearch ? openSearch = false : openSearch = true">
+			<div class="sprite sprite-search"></div>
+			<div class="sprite sprite-searchH"></div>
+		</div>
+		<div class="header_rightCol_searchRes" ng-show="activeSearch">
+			<a ng-repeat="(key, item) in data | filter:search" href="/#/home/{{item.male}}/{{item.type}}/{{key}}">
+			<img ng-src="http://dummyimage.com/{{item.photos[0]}}/a0ccdb/2e2e2e.jpg">
+			<h4>{{item.name}}</h4>
+			<p>{{item.price}}</p>
+			</a>
+		</div>
+		<a class="header_rightCol_basket" ui-sref="basket" ui-sref-active="active-link">
+		<div class="sprite sprite-basket"></div>Basket({{count}})</a>
+		<div class=""></div>
+	</div>
 	<!-- <a ui-sref="ordersend" ui-sref-active="active-link">Заказ Выполнен</a> -->
 	<!-- <a href="/#/catalog/shooes/gost">Наименование</a><br>
 	<a href="/#/catalog/shooes">О товаре</a> -->
