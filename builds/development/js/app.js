@@ -250,6 +250,11 @@
             angular.forEach(data, function(value, key) {
                      
                 }); 
+        },
+        getOrder: function() {
+           if(orderArr[[0]]) {
+                return orderArr;
+           } 
         }
     };
         return publickObj;
