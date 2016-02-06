@@ -176,14 +176,26 @@ a:hover {
 .linkBig {
 	width: 230px;
 	height: 58px;
+	border-bottom: 1px solid #a3a3a3;
+	text-transform: uppercase;
+}
+.linkWhH:hover {
+	background: #e5e5e5;
+} 
+.linkOrH {
+	background: #e67429;
 }
 .linkMed {
 	width: 200px;
 	height: 55px;
+	border-bottom: 1px solid #a3a3a3;
+	text-transform: uppercase;
 }
 .linkSmall {
 	width: 174px;
 	height: 53px;
+	border-bottom: 1px solid #a3a3a3;
+	text-transform: uppercase;
 }
 .orange {
 	background: #e67429;
@@ -222,7 +234,7 @@ img {
 	width: 350px;
 }
 header, main, footer {
-	max-width: 1150px;
+	max-width: 1240px;
 	min-width: 414px;
 	margin: 0 auto;
 	background: white;

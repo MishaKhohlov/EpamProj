@@ -4,9 +4,9 @@
 	flex-direction: row;
 	justify-content: space-between;
 	border-bottom: 1px solid #a3a3a3;
-	max-width: 95.21%;
+	max-width: 94.91%;
 	margin: 0 auto;
-	padding-bottom: 30px;
+	padding-bottom: 37px;
 
 }
 .header a {
@@ -20,8 +20,8 @@
 }
 .header_leftCol_logo {
 	overflow: hidden;
-	width: 38px;
-	height: 39px;
+	width: 39px;
+	height: 42px;
 	background: black;
 }
 .header_leftCol_logo h1 {
@@ -31,8 +31,8 @@
 	text-align: center;
 }
 .header_leftCol_menu {
-	margin-left: 53px;
-	width: 323px;
+	margin-left: 58px;
+	width: 357px;
 	display: flex;
 	flex-wrap: nowrap;
 	flex-direction: row;
@@ -41,11 +41,10 @@
 .header_leftCol_menu a {
 	padding: 13px 0;
  	display: block;
-	font-size: 14px;
 }
 .header_rightCol {
 	display: flex;;
-	margin-top: 31px;
+	margin-top: 36px;
 	margin-right: 0px;
 	position: relative;;
 }
@@ -58,7 +57,7 @@
 	overflow: hidden;
 	transition: 0.2s linear all;
 	box-sizing: border-box;
-	margin-right: 35px;
+	margin-right: 26px;
 }
 .header_rightCol_search_cont:hover {
 	background: #606060;
@@ -88,25 +87,27 @@
 	margin: auto;
 }
 .header_rightCol_search {
-	width: 199px;
+	width: 149px;
 	height: 39px;
 	box-sizing: border-box;
 	border: 1px solid #a3a3a3;
 	border-right: none;
 	font-family: 'latoItalic';
 	padding-top: 2px;
-	padding-left: 13px;
+	padding-left: 14px;
 	font-size: 12px;
 	}
 .header_rightCol_basket {
 	font-size: 13px;
-	margin-top: 13px;
+	margin-top: 10px;
 	letter-spacing: 0.4px;
+	margin-right: 36px;
 }
 .sprite-basket {
-	margin-top: -3px;
+	margin-top: 1px;
 	margin-right: 8px;
 	float: left;
+	transform: scale(1.1);
 }
 .header_menuCont {
 	display: none;
@@ -164,18 +165,21 @@
 	.header_leftCol {
 		margin-top: 20px;
 	}
+	.header_rightCol { 
+		margin-top: 20px;
+	}
 	.header_rightCol_basket {
 		margin-top: 10px;
-		margin-right: 47px;
+		margin-right: 44px;
 		font-size: 19px;
 		letter-spacing: 0px;
 	}
 	.sprite-basket {
-		margin-top: 1px;
-		transform: scale(1.3);
+		margin-top: 2px;
+		transform: scale(1.45);
 	}
 	.header_rightCol_search_cont {
-		margin-right: 17px;
+		margin-right: 20px;
 	}
 	.header_rightCol_search {
 		width: 150px;
@@ -199,16 +203,41 @@
 }
 @media only screen and (min-device-width: 0px) and (max-device-width: 550px), (min-width: 0px) and (max-width: 550px) {
 	.header {
-		
 		max-width: 91.6%;
+		
 	}
 	.header_rightCol {
+		margin-top: 30px;
 		position: static;
 	}
 	.header_rightCol_search {
+		display: none;
 		position: absolute;
 		top: 91px;
-		left: 20px;
-		width: 86%;
+		left: 16px;
+		width: 84%;
+	}
+	/*При клике когда ширина меньше 550px */
+	/*.header {
+		padding-bottom: 80px;
+	}
+	.header_rightCol_search_cont {
+		position: absolute;
+		top: 91px;
+		right: 0px;
+	}
+	.header_rightCol_search {
+		display: block;
+	}*/
+	/*При повторном клике удалить*/
+	.header_rightCol_basket {
+		margin-right: 8px;
+		letter-spacing: -0.5px;
+	}
+	
+
+	.sprite-basket {
+		margin-right: 10px;
+		transform: scale(1.4);
 	}
 }
