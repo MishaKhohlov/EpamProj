@@ -23,7 +23,7 @@
          url('../fonts/lato-italic-webfont.woff') format('woff'),
          url('../fonts/lato-italic-webfont.ttf') format('truetype');
     font-weight: normal;
-    font-style: normal;
+    font-style: italic;
 
 }
 
@@ -120,10 +120,10 @@
 * {
 	font-family: 'latoRegular';
 	font-size: 14px;
-	margin: 0px;
-	padding: 0px;
-	color: black;
 	line-height: 17px;
+	color: #303030;
+	padding: 0px;
+	margin: 0px;
 }
 h1 {
 	font-size: 69px;
@@ -137,8 +137,8 @@ h2 {
 .subHeader {
 	font-family: 'Georgia';
 	font-style: italic;
-	font-size: 24px;
 	line-height: 1.45;
+	font-size: 24px;
 }
 .subHeaderMin {
 	font-family: 'Georgia';
@@ -176,11 +176,12 @@ a:hover {
 .linkBig {
 	width: 230px;
 	height: 58px;
-	border-bottom: 1px solid #a3a3a3;
+	border: 1px solid #a3a3a3;
 	text-transform: uppercase;
 }
 .linkWhH:hover {
 	background: #e5e5e5;
+	text-decoration: none;
 } 
 .linkOrH {
 	background: #e67429;
@@ -201,7 +202,7 @@ a:hover {
 	background: #e67429;
 }
 .orangeL {
-	background: #f68236;
+    background: #f68236;
 }
 .greyB {
 	background: #303030;
@@ -220,9 +221,6 @@ li {
 }
 body {
 	background: #e5e5e5;
-}
-img {
-	max-width: 300px;
 }
 .activeSearch {
 	

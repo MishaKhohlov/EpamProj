@@ -1,0 +1,179 @@
+.main {
+	max-width: 94.91%;
+	margin: 0 auto;
+}
+.main_title {
+	text-align: center;
+	margin-top: 145px;
+	line-height: 69px;
+	text-transform: uppercase;
+	margin-bottom: 29px;
+	letter-spacing: 0.6px;
+}
+.main_slog {
+	letter-spacing: -0.6px;
+	text-align: center;
+}
+.main_link {
+	margin: 0 auto;
+	margin-top: 61px;
+	line-height: 59px;
+	box-sizing: border-box;
+	margin-bottom: 139px;
+	text-align: center;
+}
+.main_wraperImg span, p {
+	color: white;
+}
+.main_wraperImg {
+	width: 100%;
+	box-sizing: border-box;
+	margin: 0 auto;
+	display: flex;
+	justify-content: center;
+	flex-wrap: nowrap;
+	align-content: flex-start;
+	
+}
+.main_wraperImg_img {
+	cursor: pointer;
+	flex-basis: 294px;
+	flex-shrink: 2;
+	overflow: hidden;
+	position: relative;
+}
+.main_wraperImg_img img{
+	width: 100%;
+	margin-bottom: -6px;
+} 
+.main_wraperImg_img_mask {
+	transition: 0.4s linear all;
+	width: 100%;
+	height: 100%;
+	background: #a3a3a3;
+	opacity: 0;
+	position: absolute;
+	top: 0;
+	left: -200px;
+	z-index: 9;
+	text-align: center;
+}
+.main_wraperImg_img_mask img {
+	margin: 50px auto;
+	margin-bottom: 25px;
+	display: block;
+	width: 92px;
+	height: 25px;
+}
+.main_wraperImg_img_mask span {
+	display: block;
+	width: 185px;
+	margin: 0 auto;
+	font-size: 12px;
+	line-height: 17px;
+	font-family: 'Georgia';
+	font-style: italic;
+}
+.main_wraperImg_img_mask span:last-child {
+	margin-top: 20px;
+	font-size: 14px;
+	font-family: 'latoBold'; 
+	font-style: normal;
+}
+.main_wraperImg_img:hover .main_wraperImg_img_mask {
+	opacity: 1;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.main_wraperImg_img_text {
+	z-index: 8;
+	position: absolute;
+	top: 35%;
+	left: 0;
+	right: 0;
+	margin: auto;
+	text-align: center
+}
+.main_wraperImg_img_text p {
+	text-transform: uppercase;
+	font-size: 34px;
+	font-family: 'latoBold';
+	width: 182px;
+	line-height: 35px;
+	margin: 0 auto;
+	margin-bottom: 6px;
+	letter-spacing: 2px;
+}
+.main_wraperImg_img_text span {
+	font-family: 'latoItalic';
+	font-size: 16px;
+	letter-spacing: 3.5px;
+}
+.main_head2 {
+	margin-top: 85px;
+	text-align: center;
+	text-transform: uppercase;
+	margin-bottom: 12px;
+	letter-spacing: 2.6px;
+}
+h4.main_slog {
+	text-align: center;
+	margin-bottom: 55px;
+	font-size: 16px;
+	letter-spacing: 0.6px;
+}
+.main_form {
+	display: block;
+	max-width: 569px;
+	margin: 0 auto;
+	overflow: hidden;
+	margin-bottom: 50px;
+	position: relative;
+}
+.main_form_input {
+	padding: 20px 10px;
+	border: 1px solid #a3a3a3;
+	font-family: 'latoItalic';
+	box-sizing: border-box;
+	width: 480px;
+	float: left; 
+}
+.main_form_add {
+	font-size: 12px;
+	text-align: center;
+	right: 0;
+	margin-bottom: 80px;
+	float: right;
+	color: white;
+	padding: 19.5px 38px;
+	z-index: 7;
+	position: absolute;
+}
+.main_form_add:hover {
+	text-decoration: none;
+	background: #e67429;
+}
+.main_wrMessahe {
+	position: relative;
+}
+.main_wrMessahe_thankEm {
+	position: absolute;
+	bottom: 4px;
+	left: 0;
+	right: 0;
+	text-align: center;
+	font-family: 'latoBold';
+	font-size: 22px;
+	text-transform: uppercase;
+}
+.main_wrMessahe_wrongEm {
+	left: 0;
+	right: 0;
+	position: absolute;
+	color: #ed1c24;
+	bottom: 4px;
+	text-align: center;
+	font-size: 12px;
+	font-family: 'latoItalic';
+}
