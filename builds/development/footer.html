@@ -1,9 +1,54 @@
-<div ng-controller="mainCtrl">
-	<h1>footer</h1>
-	<div>
-		<div>
-			<img ng-repeat="item in lookBook" ng-src="http://dummyimage.com/{{item}}/a0ccdb/2e2e2e.jpg">
-			
+<div class="footer" ng-controller="mainCtrl">
+	<div class="footer_wrapperImg">
+		<div class="footer_wrapperImg_left"><div class="sprite sprite-sliderCntrl"></div></div>
+		<div class="footer_wrapperImg_scroll">
+			<div class="footer_wrapperImg_scroll_cont" ng-repeat="item in lookBook">
+				<img ng-src="http://dummyimage.com/{{item}}/a0ccdb/2e2e2e.jpg">
+			</div>
+		</div>
+		<div class="footer_wrapperImg_right"><div class="sprite sprite-sliderCntrl"></div></div>
+	</div>
+	<div class="footer_wrapperInf">
+		<div class="footer_wrapperInf_content">
+			<h5>Collection</h5>
+			<a href="/#/home/women">Woman</a>
+			<a href="/#/home/men">Men</a>
+			<a href="/#/home/kids">Kids</a>
+			<a href="/#/home/cominsoon">Coming Soon</a>
+		</div>
+		<div class="footer_wrapperInf_content">
+			<h5>Site</h5>
+			<a href="">Terms of Service</a>
+			<a href="">Private Policy</a>
+			<a href="">Copyright Policy</a>
+			<a href="">Press Kit</a>
+			<a href="">Support</a>
+		</div>
+		<div class="footer_wrapperInf_content">
+			<h5>Shop</h5>
+			<a href="">About us</a>
+			<a href="">Shipping Methods</a>
+			<a href="">Career</a>
+			<a href="">Contact</a>
+		</div>
+		<div class="footer_wrapperInf_content">
+			<h5>Social</h5>
+			<span>Shoper is made with love in Warsaw,</span>
+			<small>2014 © All rights reserved. El Passion</small>
+			<div class="footer_wrapperInf_content_social">
+				<div class="footer_wrapperInf_content_social_tw">
+					<div class="sprite sprite-tw"></div>
+					<div class="sprite sprite-twH"></div>
+				</div>
+				<div class="footer_wrapperInf_content_social_fc">
+					<div class="sprite sprite-fc"></div>
+					<div class="sprite sprite-fcH"></div>
+				</div>
+				<div class="footer_wrapperInf_content_social_inst">
+					<div class="sprite sprite-inst"></div>
+					<div class="sprite sprite-instH"></div>
+				</div>
+			</div>
 		</div>
 	</div>
 </div>
