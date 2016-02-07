@@ -87,7 +87,7 @@
 	margin: auto;
 }
 .header_rightCol_search {
-	width: 149px;
+	width: 152px;
 	height: 39px;
 	box-sizing: border-box;
 	border: 1px solid #a3a3a3;
@@ -165,12 +165,12 @@
 	.header_leftCol {
 		margin-top: 20px;
 	}
-	.header_rightCol { 
-		margin-top: 20px;
+	.header_rightCol {
+	margin-top: 31px;
 	}
 	.header_rightCol_basket {
 		margin-top: 10px;
-		margin-right: 44px;
+		margin-right: 0px;
 		font-size: 19px;
 		letter-spacing: 0px;
 	}
@@ -179,10 +179,10 @@
 		transform: scale(1.45);
 	}
 	.header_rightCol_search_cont {
-		margin-right: 20px;
+		margin-right: 17px;
 	}
 	.header_rightCol_search {
-		width: 150px;
+		width: 147px;
 	}
 	.header_menuCont {
 		padding: 20px 0;
