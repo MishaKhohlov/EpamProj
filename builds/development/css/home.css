@@ -221,7 +221,7 @@ h4.main_slog {
 		margin-bottom: 23px;
 	}
 	.subHeader {
-		margin-bottom: 50px;
+	margin-bottom: 48px;
 	}
 	.main_link {
 		display: none;
@@ -286,6 +286,11 @@ h4.main_slog {
 	.main_form_input {
 	width: 90%;
 	}
+	.main_form_add {
+		font-size: 17px;
+		padding: 20.5px 34px;
+	}
+
 }
 @media only screen and (min-device-width: 0px) and (max-device-width: 440px), (min-width: 0px) and (max-width: 440px) {
 	.main_wraperImg {

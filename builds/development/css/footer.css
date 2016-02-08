@@ -6,8 +6,8 @@
 	width: 99.8%;
 	margin: 0 auto;
 	position: relative;
-	margin-top: 4px;
-	margin-bottom: 51.5px;
+	margin-top: 2px;
+	margin-bottom: 49.5px;
 }
 .footer_wrapperImg_scroll {
 	overflow: scroll;
@@ -126,7 +126,6 @@
 	display: flex;
 	flex-wrap: nowrap;
 	flex-direction: row;
-	align-content: flex-start;
 	flex-shrink: 0;
 }
 .footer_wrapperInf_content_social > div {
@@ -159,4 +158,48 @@
 }
 .footer_wrapperInf_content_social > div:hover .sprite-instH {
 	opacity: 1;
+}
+@media only screen and (min-device-width: 0px) and (max-device-width:790px), (min-width: 0px) and (max-width: 790px) { 
+	.footer_wrapperImg {
+	width: 100%;
+	margin-bottom: 57px;
+	}
+	.footer_wrapperInf_content {
+		display: none;
+	}
+	.footer_wrapperInf_content:last-child {
+		display: block;
+		text-align: center;
+		padding-left: 0;
+		flex-basis: 400px;
+	}
+	.footer_wrapperInf_content_social {
+		justify-content: center;
+		margin-top: 37px;
+	}
+	.footer_wrapperInf_content h5 {
+		font-size: 29px;
+		letter-spacing: 7px;
+		margin-bottom: 59px;
+	}
+	.footer_wrapperInf_content span {
+		letter-spacing: 1.9px;
+		margin-bottom: 11px;
+	}
+	.footer_wrapperInf_content small {
+		font-size: 17px;
+		letter-spacing: 0.5px;
+	}
+	.footer_wrapperInf_content_social > div {
+		margin-right: 16px;
+	}
+	.footer_wrapperInf_content_social > div:last-child {
+		margin-right: 0;
+	}
+}
+@media only screen and (min-device-width: 0px) and (max-device-width: 440px), (min-width: 0px) and (max-width: 440px) {
+	.footer_wrapperImg {
+		width: 95%;
+		margin-bottom: 55px;
+	}
 }
