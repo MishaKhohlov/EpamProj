@@ -2,6 +2,8 @@
 @import 'header.css';
 @import 'home.css';
 @import 'footer.css';
+@import 'categoryAll.css';
+
 /*------------------------------fonts-------------------------------------------*/
 @font-face {
     font-family: 'latoBold';
@@ -121,9 +123,9 @@
 	font-family: 'latoRegular';
 	font-size: 14px;
 	line-height: 17px;
-	color: #303030;
 	padding: 0px;
 	margin: 0px;
+	color: #303030;
 }
 h1 {
 	font-size: 69px;
@@ -165,12 +167,14 @@ h3 {
 }
 a {
 	font-family: 'latoRegular';
-	display: block;
 	text-decoration: none;
 	cursor: pointer;
 	font-size: 16px;
+	display: block;
+	
 }
 a:hover {
+
 	text-decoration: underline;
 }
 .linkBig {

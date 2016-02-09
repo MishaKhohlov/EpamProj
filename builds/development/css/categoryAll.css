@@ -1,0 +1,177 @@
+.clthAll {
+	max-width: 94.91%;
+	margin: 0 auto;
+	margin-bottom: 43px;
+}
+.clthAll_link {
+	text-transform: uppercase;
+	margin-top: 38px;
+}
+.clthAll_link_homeL, .clthAll_link_maleL {
+	display: inline;
+	font-size: 12px;
+}
+
+.clthAll_clothes {
+	margin-top: 82px;
+}
+.clthAll_clothes__first {
+	margin-top: 52px;
+}
+.clthAll_link span {
+	font-size: 12px;
+	margin-left: 5px;
+	margin-right: 2px;
+}
+.clthAll_clothes_linkTitle_name {
+	text-transform: uppercase;
+	font-family: 'latoBold';
+	font-size: 36px;
+	line-height: 36px;
+	text-align: center;
+	margin-bottom: 75px;
+	letter-spacing: 1.1px;
+}
+.clthAll_clothes_wrapper {
+	width: 100%;
+	display: flex;
+	flex-wrap: nowrap;
+	flex-direction: row;
+	justify-content: space-between;
+	padding-bottom: 63px;
+	border-bottom: 1px solid #a3a3a3;
+}
+.clthAll_clothes_wrapper_thing {
+	max-width: 210px;
+ 	flex-basis: 210px;
+ 	display: block;
+ 	flex-shrink: 1;
+ 	text-decoration: none;
+}
+.clthAll_clothes_wrapper_thing:hover {
+	text-decoration: none;
+}
+.clthAll_clothes_wrapper_thing:hover h4{
+	text-decoration: underline;
+}
+.clthAll_clothes_wrapper_thing:hover .clthAll_clothes_wrapper_thing_contImg{
+	transition: 0.3s linear all;
+	background: #e5e5e5;
+}
+.clthAll_clothes_wrapper_thing_contImg {
+	height: 252px;
+	overflow: hidden;
+	border: 1px solid #a3a3a3;
+	position: relative;
+	margin-bottom: 14px;
+}
+.clthAll_clothes_wrapper_thing_contImg img{
+		position: absolute;
+		top: 0;
+	    bottom: 0;
+	    left: 0;
+	    right: 0; 
+	    width: 100%;
+	   /* height: 100%;*/
+	    margin: auto;
+}
+.clthAll_clothes_wrapper h4 {
+	font-family: 'latoBold';
+	line-height: 29px;
+	text-align: center;
+	letter-spacing: 0.5px;
+}
+.clthAll_clothes_wrapper p{
+	text-align: center;
+	color: black;
+	color: #303030;
+}
+.clthAll_sloganFooter {
+	text-align: center;
+	margin-top: 44px;
+	letter-spacing: -1.6px;
+}
+@media only screen and (min-device-width: 0px) and (max-device-width:1045px), (min-width: 0px) and (max-width: 1045px) {
+	.clthAll_clothes_wrapper_thing {
+		flex-basis: 170px;
+	}
+}
+@media only screen and (min-device-width: 0px) and (max-device-width:790px), (min-width: 0px) and (max-width: 790px) { 
+	.clthAll_link {
+		text-align: center;
+		margin-top: 37px;
+	}
+	.clthAll_clothes {
+		margin-top: 81px;
+	}
+		.clthAll_clothes__first {
+		margin-top: 52px;
+	}
+	.clthAll_link a{
+		font-size: 16px;
+		letter-spacing: 0;
+	}
+	.clthAll_link span{
+		margin-left: 6px;
+		margin-right: 2px;
+		font-size: 16px;
+	}
+	.clthAll_clothes_wrapper_thing {
+		flex-basis: 225px;
+		max-width: 225px;
+		margin-bottom: 23px;
+	}
+	.clthAll_clothes_wrapper {
+		flex-wrap: wrap;
+		max-width: 497px;
+		margin: 0 auto;
+		padding-bottom: 58px;
+	}
+	.clthAll_sloganFooter {
+		display: none;
+	}
+	/*убрать слайдер. когда добавим скрипт убрать этот класс*/
+	.footer_wrapperImg {
+		display: none;
+	}
+	.footer_wrapperInf {
+		margin-top: 8px;
+	}
+	.clthAll_clothes_wrapper__last {
+		border-bottom: none;
+	}
+	.clthAll_line {
+		border-bottom: 1px solid #a3a3a3;
+	}
+}
+@media only screen and (min-device-width: 0px) and (max-device-width: 440px), (min-width: 0px) and (max-width: 440px) {
+	.clthAll_link a{
+		font-size: 15px;
+		letter-spacing: 0.5px;
+	}
+	.clthAll_link span{
+		margin-left: 7px;
+		margin-right: 2px;
+		font-size: 14px;
+	}
+	.clthAll_clothes {
+		margin-top: 33px;
+	}
+	.clthAll_clothes__first {
+		margin-top: 42px;
+	}
+	.clthAll_clothes_linkTitle_name {
+		font-size: 27px;
+		letter-spacing: 0.4px;
+		margin-bottom: 25px;
+	}
+	.clthAll_clothes_wrapper {
+		max-width: 369px;
+	}
+	.clthAll_clothes_wrapper_thing {
+		flex-basis: 167px;
+	}
+	.clthAll_clothes_wrapper {
+		padding-bottom: 18px;
+	}
+}

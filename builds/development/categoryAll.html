@@ -1,23 +1,52 @@
-<div><a href="/#/home">home</a> -  <a href="/#/{{male}}">{{male}}</a></div>
-
-	<a href="/#/home/{{male}}/coats"><h1>Coats</h1></a>
-	<a href="/#/home/{{male}}/coats/{{item.index}}" ng-repeat="item in viewCoats">
-		<img ng-src="http://dummyimage.com/{{item.photos[0]}}/a0ccdb/2e2e2e.jpg">
-		<h4>{{item.name}}</h4>
-		<p>{{item.price}}</p>
-	</a>
-
-	<a href="/#/home/{{male}}/outerwear"><h1>outerwear</h1></a>
-	<a href="/#/home/{{male}}/outerwear/{{item.index}}" ng-repeat="item in viewOuterwear">
-		<img ng-src="http://dummyimage.com/{{item.photos[0]}}/a0ccdb/2e2e2e.jpg">
-		<h4>{{item.name}}</h4>
-		<p>{{item.price}}</p>
-	</a>
-
-
-	<a href="/#/home/{{male}}/tshirt"><h1>T-Shirts</h1></a>
-	<a href="/#/home/{{male}}/tshirt/{{item.index}}" ng-repeat="item in viewTshirt">
-		<img ng-src="http://dummyimage.com/{{item.photos[0]}}/a0ccdb/2e2e2e.jpg">
-		<h4>{{item.name}}</h4>
-		<p>{{item.price}}</p>
-	</a>
+<div class="clthAll">
+	<div class="clthAll_link">
+		<a class="clthAll_link_homeL" href="/#/home">home</a><span>/</span>
+		<a class="clthAll_link_maleL" href="/#/{{male}}">{{male}}</a>
+	</div>
+	<div class="clthAll_clothes clthAll_clothes__first">
+		<a class="clthAll_clothes_linkTitle" href="/#/home/{{male}}/coats">
+			<h1 class="clthAll_clothes_linkTitle_name">Coats</h1>
+		</a>
+		<div class="clthAll_clothes_wrapper">
+			<a class="clthAll_clothes_wrapper_thing" href="/#/home/{{male}}/coats/{{item.index}}" ng-repeat="item in viewCoats">
+				<div class="clthAll_clothes_wrapper_thing_contImg">
+					<img ng-src="http://dummyimage.com/{{item.photos[0]}}/a0ccdb/2e2e2e.jpg">
+				</div>
+				<h4>{{item.name}}</h4>
+				<p>{{item.price}} $</p>
+			</a>
+		</div>
+	</div>
+	<div class="clthAll_clothes">
+		<a class="clthAll_clothes_linkTitle" href="/#/home/{{male}}/outerwear">
+			<h1 class="clthAll_clothes_linkTitle_name">outerwear</h1>
+		</a>
+		<div class="clthAll_clothes_wrapper">
+			<a class="clthAll_clothes_wrapper_thing" href="/#/home/{{male}}/outerwear/{{item.index}}" ng-repeat="item in viewOuterwear">
+				<div class="clthAll_clothes_wrapper_thing_contImg">
+					<img ng-src="http://dummyimage.com/{{item.photos[0]}}/a0ccdb/2e2e2e.jpg">
+				</div>
+				<h4>{{item.name}}</h4>
+				<p>{{item.price}} $</p>
+			</a>
+		</div>
+	</div>
+	<div class="clthAll_clothes ">
+	    <a class="clthAll_clothes_linkTitle" href="/#/home/{{male}}/tshirt">
+			<h1 class="clthAll_clothes_linkTitle_name">T-Shirts</h1>
+		</a>
+		<div class="clthAll_clothes">
+			<div class="clthAll_clothes_wrapper clthAll_clothes_wrapper__last">
+				<a class="clthAll_clothes_wrapper_thing" href="/#/home/{{male}}/tshirt/{{item.index}}" ng-repeat="item in viewTshirt">
+					<div class="clthAll_clothes_wrapper_thing_contImg">
+						<img ng-src="http://dummyimage.com/{{item.photos[0]}}/a0ccdb/2e2e2e.jpg">
+					</div>
+					<h4>{{item.name}}</h4>
+					<p>{{item.price}} $</p>
+				</a>
+			</div>
+		</div>
+	</div>
+	<h5 class="clthAll_sloganFooter subHeader">Check our lookbook</h5>
+	<div class="clthAll_line"></div>
+</div>
