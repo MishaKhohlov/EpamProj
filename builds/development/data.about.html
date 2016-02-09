@@ -1,21 +1,29 @@
-<h1>data about {{things.name}}</h1>
-<div><a href="/#/home">home</a> -
- <a href="/#/home/{{male}}">{{male}}</a> - 
- <a href="/#/home/{{male}}/{{clothes}}">{{clothes}}</a>
- <a>{{things.name}}</a>
- </div>
-<div>
-	<img ng-src="http://dummyimage.com/{{things.photos[0]}}/a0ccdb/2e2e2e.jpg">
-	<div>
-		<img ng-repeat="item in things.photos" ng-src="http://dummyimage.com/{{item}}/a0ccdb/2e2e2e.jpg">
+<div class="dataAb">
+		<div class="dataAb_linkCont">
+			<a class="dataAb_linkCont_link" href="/#/home">home</a><span>/</span>
+			<a class="dataAb_linkCont_link" href="/#/{{male}}">{{male}}</a><span>/</span>
+			<a class="dataAb_linkCont_link" href="/#/home/{{male}}/{{clothes}}">{{clothes}}</a><span>/</span>
+			<a class="dataAb_linkCont_link">{{things.name}}</a>
+		</div>
+	<div class="dataAb_centerImg">
+		<img class="dataAb_centerImg_img" ng-src="http://dummyimage.com/{{things.photos[0]}}/a0ccdb/2e2e2e.jpg">
+		<div class="dataAb_centerImg_minCont">
+			<div class="dataAb_centerImg_minCont_wrap" ng-repeat="(key, item) in things.photos">
+				<img class="dataAb_centerImg_minCont_wrap_img" ng-click="chooseImg(key)" ng-src="http://dummyimage.com/{{item}}/a0ccdb/2e2e2e.jpg">
+			</div>
+		</div>
 	</div>
+	
+	<h1 class="dataAb_name">{{things.name}}</h1>
+	<span class="dataAb_artc">Article number: {{things.artnum}}</span>
+	<span class="dataAb_price subHeaderMin">€ {{things.price}}</span>
+	<p class="dataAb_descr">{{things.desc}}</p>
+	<span class="dataAb_titleSize">size</span>
+	<div class="dataAb_sizeCont">
+		<div class="dataAb_sizeCont_size" ng-repeat="(key, item) in things.size">
+			<input id="menuSize{{key}}" value="{{item}}" type="radio" name="menuFirst">
+			<label for="menuSize{{key}}">{{item}}</label>
+		</div>
+	</div>
+	<a class="dataAb_buy orangeL" ng-click="buy()">Add to cart</a>
 </div>
-Name<h2>{{things.name}}</h2>
-Article<span>{{things.artnum}}</span>
-Price<span>{{things.price}}</span>
-Description<p>{{things.desc}}</p>
-<div>
-	<p>size</p>
-	<div ng-repeat="item in things.size">{{item}}</div>
-</div>
-<a ng-click="buy()">Buy</a>

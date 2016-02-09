@@ -101,7 +101,7 @@
 	font-size: 13px;
 	margin-top: 10px;
 	letter-spacing: 0.4px;
-	margin-right: 36px;
+	margin-right: 38px;
 }
 .sprite-basket {
 	margin-top: 1px;
@@ -123,6 +123,7 @@
 	overflow: scroll;;
 	height: 500px;
 	background: white;
+	z-index: 99;
 }
 .header_rightCol_searchRes a {
 	display: block;
