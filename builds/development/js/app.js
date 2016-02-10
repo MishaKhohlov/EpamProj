@@ -416,6 +416,13 @@
             $scope.id = $state.params.id;
             var lastObj = {clothes: $scope.clothes, male: $scope.male};
             $scope.things = dataFact.dataThingAbout($scope.id);
+            $scope.titlePhoto = $scope.things.photos[0];
+            $scope.chooseImg = function(item) {
+                $scope.titlePhoto = item;
+            };
+            $scope.chooseImgTitle = function() {
+                $scope.titlePhoto = $scope.things.photos[0];
+            };
             res();
             $(window).resize(function(){
                 res();

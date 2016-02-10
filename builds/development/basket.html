@@ -1,32 +1,57 @@
-<h1>Basket</h1>
-<div>
-	<div><a href="/#/home">home</a> -
- 	<a href="/#/home/{{male}}">{{male}}</a> - 
- 	<a ng-show="basketEmpty" href="/#/home/{{male}}/{{clothes}}">{{clothes}}</a>
-</div>
-<div>name name name</div>
-<div ng-show="basketEmpty">
-	<div ng-repeat="(key, item) in list track by $index">
-		<div><img ng-src="http://dummyimage.com/{{item.photos[0]}}/a0ccdb/2e2e2e.jpg"></div>
-		<div>
-			<h3>{{item.name}}</h3>
-			<span>{{item.artnum}}</span>
+<div class="basket">
+<!-- global styles -->
+	<div class="dataAb_linkCont">
+		<a class="dataAb_linkCont_link" href="/#/home">home</a><span>/</span>
+		<a class="dataAb_linkCont_link" href="/#/home/{{male}}">{{male}}</a><span ng-show="basketEmpty">/</span>
+		<a class="dataAb_linkCont_link" ng-show="basketEmpty" href="/#/home/{{male}}/{{clothes}}">{{clothes}}</a>
+	</div>
+	<h1 class="basket_title">Your Shopping Bag</h1>
+	<h2 class="basket_title_subHead subHeaderMin">Items reserved for limited time only</h2>
+	<div class="basket_header">
+		<div class="basket_header_wrap">
+			<div class="basket_header_wrap_col">Product</div>
+			<div class="basket_header_wrap_col">Description</div>
 		</div>
-		<div>{{color(item.color)}}</div>
-		<div>{{item.sizeOrder}}</div>
-		<div>
-			<input ng-model="item.quantity" type="text">
-			<button ng-click="quantity(true, key)">+</button>
-			<button ng-click="quantity(false, key)">-</button>
+		<div class="basket_header_wrap">
+			<div class="basket_header_wrap_col">Color</div>
+			<div class="basket_header_wrap_col">Size</div>
+			<div class="basket_header_wrap_col">Qty</div>
+			<div class="basket_header_wrap_col">Amount</div>
+			<div class="basket_header_wrap_col">Delete</div>
 		</div>
-		<div>{{item.price}}</div>
-		<a ng-click="delete(key)">Del</a>
+	</div>
+	<div class="basket_table" ng-show="basketEmpty">
+		<div class="basket_table_thing" ng-repeat="(key, item) in list track by $index">
+			<div class="basket_table_thing_wrap">
+				<div class="basket_table_thing_centerImg">
+					<img ng-src="http://dummyimage.com/{{item.photos[0]}}/a0ccdb/2e2e2e.jpg">
+				</div>
+				<div class="basket_table_thing_name">
+					<h3>{{item.name}}</h3>
+					<span>Ref. {{item.artnum}}</span>
+				</div>
+			</div>
+			<div class="basket_table_thing_wrap">
+				<div class="basket_table_thing_color">{{color(item.color)}}</div>
+				<div class="basket_table_thing_size">{{item.sizeOrder}}</div>
+				<div class="basket_table_thing_qtyWrap">
+					<input class="basket_table_thing_qtyWrap_input" ng-model="item.quantity" type="text">
+					<div class="basket_table_thing_qtyWrap_but" ng-click="quantity(true, key)">+</div>
+					<div class="basket_table_thing_qtyWrap_but" ng-click="quantity(false, key)">-</div>
+				</div>
+				<div class="basket_table_thing_price">€{{item.price}}</div>
+				<div class="basket_table_thing_del" ng-click="delete(key)">+</div>
+			</div>
+		</div>
+	</div>
+	<h1 class="basket_table_empty subHeader" ng-hide="basketEmpty">Basket empty</h1>
+	<div class="basket_table_subtotalWrap" ng-show="basketEmpty">
+		<div class="basket_table_subtotalWrap_text">Subtotal</div>
+		<div class="basket_table_subtotalWrap_data">{{subtotal()}}</div>
+	</div>
+
+	<div class="basket_table_linkWrap_continueShop">
+		<a class="basket_table_linkWrap_orderSend" ng-show="basketEmpty" ui-sref="ordersend">Order now</a>
+		<a class="basket_table_linkWrap_continueShop" href="/#/home/{{male}}/{{clothes}}">Continue Shoping</a>
 	</div>
 </div>
-<div ng-hide="basketEmpty">
-	<h1>Basket empty</h1>
-</div>
-Subtotal<div ng-show="basketEmpty">{{subtotal()}}</div>
-
-<a href="/#/home/{{male}}/{{clothes}}">Continue Shoping</a>
-<a ng-show="basketEmpty" ui-sref="ordersend">Order now</a>

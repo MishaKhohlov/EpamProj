@@ -4,6 +4,7 @@
 @import 'footer.css';
 @import 'categoryAll.css';
 @import 'dataAbout.css';
+@import 'basket.css';
 
 /*------------------------------fonts-------------------------------------------*/
 @font-face {
@@ -148,6 +149,7 @@ h2 {
 	font-style: italic;
 	font-size: 18px;
 	line-height: 1.45;
+	font-weight: 100;
 }
 .mainMenu {
 	font-family: 'latoRegular';

@@ -1,15 +1,15 @@
 <div class="dataAb">
 		<div class="dataAb_linkCont">
 			<a class="dataAb_linkCont_link" href="/#/home">home</a><span>/</span>
-			<a class="dataAb_linkCont_link" href="/#/{{male}}">{{male}}</a><span>/</span>
+			<a class="dataAb_linkCont_link" href="/#/home/{{male}}">{{male}}</a><span>/</span>
 			<a class="dataAb_linkCont_link" href="/#/home/{{male}}/{{clothes}}">{{clothes}}</a><span>/</span>
 			<a class="dataAb_linkCont_link">{{things.name}}</a>
 		</div>
 	<div class="dataAb_centerImg">
-		<img class="dataAb_centerImg_img" ng-src="http://dummyimage.com/{{things.photos[0]}}/a0ccdb/2e2e2e.jpg">
+		<img class="dataAb_centerImg_img" ng-click="chooseImgTitle()" ng-src="http://dummyimage.com/{{titlePhoto}}/a0ccdb/2e2e2e.jpg">
 		<div class="dataAb_centerImg_minCont">
 			<div class="dataAb_centerImg_minCont_wrap" ng-repeat="(key, item) in things.photos">
-				<img class="dataAb_centerImg_minCont_wrap_img" ng-click="chooseImg(key)" ng-src="http://dummyimage.com/{{item}}/a0ccdb/2e2e2e.jpg">
+				<img class="dataAb_centerImg_minCont_wrap_img" ng-click="chooseImg(item)" ng-src="http://dummyimage.com/{{item}}/a0ccdb/2e2e2e.jpg">
 			</div>
 		</div>
 	</div>
