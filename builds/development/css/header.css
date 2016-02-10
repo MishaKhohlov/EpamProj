@@ -223,18 +223,18 @@
 		left: 16px;
 		width: 84%;
 	}
-	/*При клике когда ширина меньше 550px */
-	/*.header {
+	/*При клике когда ширина меньше 440px */
+	.headerMin {
 		padding-bottom: 80px;
 	}
-	.header_rightCol_search_cont {
+	.header_rightCol_search_contMin {
 		position: absolute;
 		top: 91px;
 		right: 0px;
 	}
-	.header_rightCol_search {
+	.header_rightCol_searchMin {
 		display: block;
-	}*/
+	}
 	/*При повторном клике удалить*/
 	.header_rightCol_basket {
 		margin-right: 8px;

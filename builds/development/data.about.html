@@ -20,8 +20,8 @@
 	<p class="dataAb_descr">{{things.desc}}</p>
 	<span class="dataAb_titleSize">size</span>
 	<div class="dataAb_sizeCont">
-		<div class="dataAb_sizeCont_size" ng-repeat="(key, item) in things.size">
-			<input id="menuSize{{key}}" value="{{item}}" type="radio" name="menuFirst">
+		<div class="dataAb_sizeCont_size" ng-repeat="(key, item) in things.size" ng-class="{errorChexbox : emptyChex}">
+			<input ng-model="$parent.size" id="menuSize{{key}}" value="{{item}}" type="radio" name="size">
 			<label for="menuSize{{key}}">{{item}}</label>
 		</div>
 	</div>

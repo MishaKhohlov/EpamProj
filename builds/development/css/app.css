@@ -250,12 +250,19 @@ body {
 .activeSearch {
 	
 }
+.errorChexbox {
+	border: 1px solid red;
+}
+.hideElem {
+	display: none;
+}
 .seacrhToggle {
 	border: 1px solid red;
 	overflow: scroll;
 	height: 400px;
 	width: 350px;
 }
+input[type="text"]:focus { outline: none; }
 header, main, footer {
 	max-width: 1240px;
 	min-width: 414px;

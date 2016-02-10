@@ -130,10 +130,6 @@
 	.clthAll_sloganFooter {
 		display: none;
 	}
-	/*убрать слайдер. когда добавим скрипт убрать этот класс*/
-	/*.footer_wrapperImg {
-		display: none;
-	}*/
 	.footer_wrapperInf {
 		margin-top: 8px;
 	}

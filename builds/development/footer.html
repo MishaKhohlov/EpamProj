@@ -1,12 +1,12 @@
 <div class="footer" ng-controller="mainCtrl">
 	<div class="footer_wrapperImg">
-		<div class="footer_wrapperImg_left"><div class="sprite sprite-sliderCntrl"></div></div>
+		<div ng-click="scroll(true)" class="footer_wrapperImg_left"><div class="sprite sprite-sliderCntrl"></div></div>
 		<div class="footer_wrapperImg_scroll">
 			<div class="footer_wrapperImg_scroll_cont" ng-repeat="item in lookBook">
 				<img ng-src="http://dummyimage.com/{{item}}/a0ccdb/2e2e2e.jpg">
 			</div>
 		</div>
-		<div class="footer_wrapperImg_right"><div class="sprite sprite-sliderCntrl"></div></div>
+		<div ng-click="scroll(false)" class="footer_wrapperImg_right"><div class="sprite sprite-sliderCntrl"></div></div>
 	</div>
 	<div class="footer_wrapperInf">
 		<div class="footer_wrapperInf_content">

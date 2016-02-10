@@ -10,7 +10,7 @@
 	</div>
 	<div class="header_rightCol">
 		<input class="header_rightCol_search " placeholder="Search something..." type="text" ng-blur="blurInp()" ng-show="openSearch" ng-model="search.name" ng-change="searchInp()">
-		<div class="header_rightCol_search_cont" ng-click="openSearch ? openSearch = false : openSearch = true">
+		<div class="header_rightCol_search_cont" ng-click="openSearch ? openSearch = false : openSearch = true; resizeInp()">
 			<div class="sprite sprite-search"></div>
 			<div class="sprite sprite-searchH"></div>
 		</div>

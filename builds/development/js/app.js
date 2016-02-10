@@ -9,6 +9,14 @@
     function mainCtrl($scope, $log, dataFact, $timeout) {
         $log.debug('main cntrl start');
             $scope.lookBook = dataFact.dataImage();
+            $scope.scroll = function(side) {
+                var isSccroll = $('.footer_wrapperImg_scroll').scrollLeft();
+                if(side) {
+                    $('.footer_wrapperImg_scroll').stop().animate({scrollLeft : isSccroll-200}, 300,  'linear');
+                } else {
+                    $('.footer_wrapperImg_scroll').stop().animate({scrollLeft : isSccroll+200}, 300,  'linear');
+                }
+            };
             $scope.emailReg = '\^[-._a-z0-9]+@(?:[a-z0-9][-a-z0-9]+\.)+[a-z]{2,6}$';
 
             $scope.emailSend = function() {
@@ -166,7 +174,7 @@
         '200x128','200x129','200x130','200x131'];
 
         var cash;
-        var cashIndex = -1;
+        var cashIndexArr = [];
         var orderArr = [];
         function sizeСl(num) {
                 switch (num) {
@@ -227,17 +235,40 @@
         dataThingAbout: function(index) {
             return data[index];
         },
-        setItem: function(index) {
-            if(cash == index) {
-                ++orderArr[cashIndex].quantity;
+        setItem: function(index, size) {
+            var isObj = false;
+            var isCopy = true;
+            var cashIndex;
+            if(orderArr[0]) {
+                angular.forEach(orderArr, function(value, key) { 
+                    if(orderArr[key].oldIndex !== index) {
+                        isObj = true;
+                    }
+                    if(orderArr[key].oldIndex == index && orderArr[key].sizeOrder !== size && isCopy) {
+                        isObj = true;
+                    } 
+                    if(orderArr[key].oldIndex == index && orderArr[key].sizeOrder == size) {
+                        isCopy = false;
+                        isObj = false;
+                        cashIndex = key;
+                    }
+                });
             } else {
-                 data[index].quantity = 1;
-                 orderArr.push(data[index]);
-                 ++cashIndex;
+                isObj = true;
             }
-            cash = index;
-            publickObj.count();
-            $log.log(orderArr);
+            if(isObj) {
+               var newObj = {};
+                angular.forEach(data[index], function(value, key) { 
+                    newObj[key] = value;
+                });
+                newObj.quantity = 1;
+                newObj.oldIndex = index;
+                newObj.sizeOrder = size; 
+                orderArr.push(newObj);
+                publickObj.count();
+            } else {
+                ++orderArr[cashIndex].quantity;
+            }
         },
         count: function() {
              if(orderArr[[0]]) {
@@ -245,11 +276,6 @@
             } else {
                 $rootScope.count = 0;
             }
-        },
-        search: function(model) {
-            angular.forEach(data, function(value, key) {
-                     
-                }); 
         },
         getOrder: function() {
            if(orderArr[[0]]) {
@@ -272,7 +298,19 @@
             $rootScope.count = 0; 
             $scope.activeSearch = false;
             $scope.data = dataFact.data();
-
+            $scope.resizeInp = function() {
+                 if(window.matchMedia('(max-width: 440px)').matches) { 
+                    if(!$('.header').hasClass('headerMin')) {
+                        $('.header').addClass('headerMin');
+                        $('.header_rightCol_search_cont').addClass('header_rightCol_search_contMin');
+                        $('.header_rightCol_search').addClass('header_rightCol_searchMin');
+                    } else {
+                        $('.header').removeClass('headerMin');
+                        $('.header_rightCol_search_cont').removeClass('header_rightCol_search_contMin');
+                        $('.header_rightCol_search').removeClass('header_rightCol_searchMin');
+                    }
+                 }
+            };
             $scope.blurInp = function() {
                 $scope.activeSearch = false;
                 $scope.search = null;
@@ -300,6 +338,19 @@
 
     function categoryAllCtrl ($scope, $log, $state, dataFact) {
     	$log.debug("categoryAllCtrl controller star");
+        res();
+        $(window).resize(function(){
+            res();
+        });  
+        function res() {
+            if(window.matchMedia('(max-width: 790px)').matches) { 
+                $('.footer_wrapperImg').addClass('hideElem');
+                } else {
+                    if($('.footer_wrapperImg').hasClass('hideElem')) {
+                    $('.footer_wrapperImg').removeClass('hideElem');
+                }
+            }
+        }        
             $scope.male = $state.params.male;
             var dataCatalog = dataFact.dataParse($scope.male, 'all');
 
@@ -360,15 +411,32 @@
 
     function aboutCtrl ($scope, $log, $state, dataFact, $sessionStorage) {
         $log.debug("dataAbout controller star");
-              $scope.clothes = $state.params.clothes;
-              $scope.male = $state.params.male;
-              $scope.id = $state.params.id;
-              var lastObj = {clothes: $scope.clothes, male: $scope.male};
-              $scope.things = dataFact.dataThingAbout($scope.id);
-
+            $scope.clothes = $state.params.clothes;
+            $scope.male = $state.params.male;
+            $scope.id = $state.params.id;
+            var lastObj = {clothes: $scope.clothes, male: $scope.male};
+            $scope.things = dataFact.dataThingAbout($scope.id);
+            res();
+            $(window).resize(function(){
+                res();
+            });  
+            function res() {
+                if(window.matchMedia('(max-width: 790px)').matches) { 
+                    $('.footer_wrapperImg').addClass('hideElem');
+                    } else {
+                         if($('.footer_wrapperImg').hasClass('hideElem')) {
+                            $('.footer_wrapperImg').removeClass('hideElem');
+                    }
+                }
+            }
               $scope.buy = function() {
+                if($scope.size) {
+                    $scope.emptyChex = false;
                     $sessionStorage.lastObj = lastObj;
-                    dataFact.setItem($scope.id);
+                    dataFact.setItem($scope.id, $scope.size);
+                } else {
+                    $scope.emptyChex = true;
+                }
               };
 
 
