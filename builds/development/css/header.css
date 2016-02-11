@@ -57,7 +57,7 @@
 	overflow: hidden;
 	transition: 0.2s linear all;
 	box-sizing: border-box;
-	margin-right: 26px;
+	margin-right: 25px;
 }
 .header_rightCol_search_cont:hover {
 	background: #606060;

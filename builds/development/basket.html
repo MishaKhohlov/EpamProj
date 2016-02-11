@@ -46,12 +46,12 @@
 	</div>
 	<h1 class="basket_table_empty subHeader" ng-hide="basketEmpty">Basket empty</h1>
 	<div class="basket_table_subtotalWrap" ng-show="basketEmpty">
-		<div class="basket_table_subtotalWrap_text">Subtotal</div>
-		<div class="basket_table_subtotalWrap_data">{{subtotal()}}</div>
+		<div class="basket_table_subtotalWrap_text">Subtotal:</div>
+		<div class="basket_table_subtotalWrap_data">{{subtotal()}}$</div>
 	</div>
 
-	<div class="basket_table_linkWrap_continueShop">
-		<a class="basket_table_linkWrap_orderSend" ng-show="basketEmpty" ui-sref="ordersend">Order now</a>
-		<a class="basket_table_linkWrap_continueShop" href="/#/home/{{male}}/{{clothes}}">Continue Shoping</a>
+	<div class="basket_linkWrap">
+		<a class="basket_linkWrap_continueShop" href="/#/home/{{male}}/{{clothes}}">Continue Shopping</a>
+		<a class="basket_linkWrap_orderSend" ng-show="basketEmpty" ui-sref="ordersend">Order now</a>
 	</div>
 </div>

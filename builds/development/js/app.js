@@ -8,6 +8,9 @@
         .config(appConfig);
     function mainCtrl($scope, $log, dataFact, $timeout) {
         $log.debug('main cntrl start');
+            if($('.footer_wrapperImg').hasClass('hideElem')) {
+                    $('.footer_wrapperImg').removeClass('hideElem');
+                }
             $scope.lookBook = dataFact.dataImage();
             $scope.scroll = function(side) {
                 var isSccroll = $('.footer_wrapperImg_scroll').scrollLeft();
@@ -338,6 +341,9 @@
 
     function categoryAllCtrl ($scope, $log, $state, dataFact) {
     	$log.debug("categoryAllCtrl controller star");
+        if($('.footer_wrapperImg').hasClass('hideElem')) {
+                    $('.footer_wrapperImg').removeClass('hideElem');
+                }
         res();
         $(window).resize(function(){
             res();
@@ -385,7 +391,9 @@
         $log.debug("data controller star");
               $scope.clothes = $state.params.clothes;
               $scope.male = $state.params.male;
-
+              if($('.footer_wrapperImg').hasClass('hideElem')) {
+                    $('.footer_wrapperImg').removeClass('hideElem');
+                }
               $scope.viewWear = dataFact.dataParse( $scope.male, $scope.clothes);
 
 
@@ -411,6 +419,9 @@
 
     function aboutCtrl ($scope, $log, $state, dataFact, $sessionStorage) {
         $log.debug("dataAbout controller star");
+            if($('.footer_wrapperImg').hasClass('hideElem')) {
+                    $('.footer_wrapperImg').removeClass('hideElem');
+                }
             $scope.clothes = $state.params.clothes;
             $scope.male = $state.params.male;
             $scope.id = $state.params.id;
@@ -470,7 +481,7 @@
     function basketCtrl ($scope, $log, $state, dataFact, $sessionStorage) {
         $log.debug("basket controller star");
             $scope.list = dataFact.getOrder();
-
+            $('.footer_wrapperImg').addClass('hideElem');
             if($sessionStorage.lastObj) {
                  $scope.clothes = $sessionStorage.lastObj.clothes;
                  $scope.male = $sessionStorage.lastObj.male;
@@ -521,7 +532,7 @@
                             res += value.price*value.quantity;
                         }
                     }); 
-                     return res;
+                     return Math.round(res);
                 };
             }
         $log.debug("basket controller finish");
