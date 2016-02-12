@@ -148,6 +148,11 @@
 .contMin {
 	display: none;
 }
+@media only screen and (min-device-width: 0px) and (max-device-width:1045px), (min-width: 0px) and (max-width: 1045px) {
+	.header_rightCol_search_cont {
+		margin-right: 28px;
+	}
+}
 @media only screen and (min-device-width: 0px) and (max-device-width:880px), (min-width: 0px) and (max-width: 880px) {
 	.header_leftCol_menu {
 		width: 224px;
@@ -184,8 +189,8 @@
 		margin-top: 2px;
 		transform: scale(1.45);
 	}
-	.header_rightCol_search_cont {
-		margin-right: 17px;
+	div.header_rightCol_search_cont {
+		margin-right: 18px;
 	}
 	.header_rightCol_search {
 		width: 147px;

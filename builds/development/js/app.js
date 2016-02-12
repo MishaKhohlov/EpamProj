@@ -341,12 +341,15 @@
 
     function categoryAllCtrl ($scope, $log, $state, dataFact) {
     	$log.debug("categoryAllCtrl controller star");
+        $scope.male = $state.params.male;
         if($('.footer_wrapperImg').hasClass('hideElem')) {
                     $('.footer_wrapperImg').removeClass('hideElem');
                 }
         res();
         $(window).resize(function(){
-            res();
+            if($state.params.male) {
+                 res();
+            }  
         });  
         function res() {
             if(window.matchMedia('(max-width: 790px)').matches) { 
@@ -357,7 +360,7 @@
                 }
             }
         }        
-            $scope.male = $state.params.male;
+            
             var dataCatalog = dataFact.dataParse($scope.male, 'all');
 
             $scope.viewCoats = dataCatalog[0];
@@ -436,7 +439,9 @@
             };
             res();
             $(window).resize(function(){
-                res();
+                if($state.params.male) {
+                 res();
+                }  
             });  
             function res() {
                 if(window.matchMedia('(max-width: 790px)').matches) { 

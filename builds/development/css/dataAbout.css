@@ -162,6 +162,10 @@
 	.dataAb_linkCont {
 		text-align: center;
 	}
+	.dataAb_linkCont a, .dataAb_linkCont span {
+	font-size: 16px;
+
+	}
 	.dataAb_centerImg {
 		width: 50%;
 		height: 300px;
