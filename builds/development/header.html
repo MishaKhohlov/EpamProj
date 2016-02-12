@@ -15,7 +15,7 @@
 			<div class="sprite sprite-searchH"></div>
 		</div>
 		<div class="header_rightCol_searchRes" ng-show="activeSearch">
-			<a ng-repeat="(key, item) in data | filter:search" href="/#/home/{{item.male}}/{{item.type}}/{{key}}">
+			<a class="header_rightCol_searchRes_link" ng-repeat="(key, item) in data | filter:search" href="/#/home/{{item.male}}/{{item.type}}/{{item.index}}">
 			<img ng-src="http://dummyimage.com/{{item.photos[0]}}/a0ccdb/2e2e2e.jpg">
 			<h4 class="mainMenu">{{item.name}}</h4>
 			<p class="smallText">{{item.price}}</p>

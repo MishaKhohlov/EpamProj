@@ -33,7 +33,8 @@
 	display: block;
 	max-width: 65%;
 	max-height: 71%;
-	margin: auto;
+	margin: auto;	
+	cursor: pointer;
 }
 .dataAb_centerImg_minCont {
 	position: absolute;

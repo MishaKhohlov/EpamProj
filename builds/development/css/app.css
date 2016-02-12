@@ -5,6 +5,7 @@
 @import 'categoryAll.css';
 @import 'dataAbout.css';
 @import 'basket.css';
+@import 'thankYou.css';
 
 /*------------------------------fonts-------------------------------------------*/
 @font-face {
@@ -160,6 +161,7 @@ h2 {
 	font-family: 'latoRegular';
 	font-size: 12px;
 	line-height: 1;
+	color: #303030;
 }
 a.button {
 	font-size: 14px;

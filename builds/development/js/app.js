@@ -173,9 +173,11 @@
             size: [sizeСl(1), sizeСl(2), sizeСl(3), sizeСl(4)], desc: desc(), artnum: randInt(10000000000, 33333333333),
              photos: ['1200x600', '600x600', '550x700', '600x1200']}
         ];
+        angular.forEach(data, function(value, key) {
+              data[key].index = key;
+        });
         var dataImage = ['200x121','200x122','200x123','200x124','200x125','200x126','200x127',
-        '200x128','200x129','200x130','200x131'];
-
+        '200x128','200x129','200x130','200x131']; 
         var cash;
         var cashIndexArr = [];
         var orderArr = [];
@@ -296,11 +298,12 @@
     angular.module('ngHeader', [])
         .controller('headerCtrl', headerCtrl);
 
-    function headerCtrl ($scope, $log, dataFact, $rootScope) {
+    function headerCtrl ($scope, $log, dataFact, $rootScope, $timeout) {
         $log.debug("Headeer controller star");
             $rootScope.count = 0; 
             $scope.activeSearch = false;
             $scope.data = dataFact.data();
+            $log.log($scope.data);
             $scope.resizeInp = function() {
                  if(window.matchMedia('(max-width: 440px)').matches) { 
                     if(!$('.header').hasClass('headerMin')) {
@@ -315,8 +318,10 @@
                  }
             };
             $scope.blurInp = function() {
-                $scope.activeSearch = false;
-                $scope.search = null;
+                $timeout(function(){
+                    $scope.activeSearch = false;
+                    $scope.search = null;
+                }, 200);   
             };
             $scope.searchInp = function() {
                 $log.log($scope.search);
@@ -486,6 +491,7 @@
     function basketCtrl ($scope, $log, $state, dataFact, $sessionStorage) {
         $log.debug("basket controller star");
             $scope.list = dataFact.getOrder();
+            $log.log($scope.list);
             $('.footer_wrapperImg').addClass('hideElem');
             if($sessionStorage.lastObj) {
                  $scope.clothes = $sessionStorage.lastObj.clothes;
@@ -563,8 +569,9 @@
 
     function orderSendCtrl ($scope, $log) {
         $log.debug("orderSend controller star");
-
-
+              if(!$('.footer_wrapperImg').hasClass('hideElem')) {
+                   $('.footer_wrapperImg').addClass('hideElem');
+                }
         $log.debug("orderSend controller finish");
     }
 

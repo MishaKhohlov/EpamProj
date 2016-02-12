@@ -125,14 +125,13 @@
 	background: white;
 	z-index: 99;
 }
-.header_rightCol_searchRes a {
+.header_rightCol_searchRes_link {
 	display: block;
 	overflow: hidden;
 	margin-bottom: 10px;
 	text-decoration: none;
-
 }
-.header_rightCol_searchRes a:hover { 
+.header_rightCol_searchRes_link:hover { 
 	background: #e5e5e5;
 	text-decoration: none;
 }

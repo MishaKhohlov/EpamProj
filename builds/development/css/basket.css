@@ -134,9 +134,10 @@ h2.basket_title_subHead {
 	color: #606060;
 	 font-family: 'latoItalic';
 }
-.basket_table_thing_name h3{
+
+.basket_table_thing_name a {
 	text-transform: uppercase;
-   font-family: 'latoBold';
+	font-family: 'latoBold';
 	margin-top: 37px;
 	line-height: 16px;
 }
