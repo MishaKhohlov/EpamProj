@@ -18,7 +18,7 @@
 .footer_wrapperImg_scroll_cont {
 	height: 120px;
 	border-left: 1px solid #bbbbbb;
-	flex-basis: 200px;
+	/*flex-basis: 200px;*/
 }
 .footer_wrapperImg_scroll_cont img {
 	height: 120px;

@@ -1,9 +1,20 @@
-<div><a href="/#/home">home</a> -
- <a href="/#/home/{{male}}">{{male}}</a> - 
- <a>{{clothes}}</a>
- </div>
-	<a href="/#/home/{{male}}/{{clothes}}/{{item.index}}" ng-repeat="item in viewWear">
-		<img ng-src="http://dummyimage.com/{{item.photos[0]}}/a0ccdb/2e2e2e.jpg">
-		<h4>{{item.name}}</h4>
-		<p>{{item.price}}</p>
-	</a>
+<div class="dataAb">
+		<div class="dataAb_linkCont">
+			<a class="dataAb_linkCont_link" href="/#/home">home</a><span>/</span>
+			<a class="dataAb_linkCont_link" href="/#/home/{{male}}">{{male}}</a><span>/</span>
+			<a class="dataAb_linkCont_link" href="/#/home/{{male}}/{{clothes}}">{{clothes}}</a>
+		</div>
+	<div class="clthAll_clothes clthAll_clothes__first">
+		<a class="clthAll_clothes_linkTitle" href="">
+			<h1 class="clthAll_clothes_linkTitle_name">{{clothes}}</h1>
+		</a>
+		<div class="clthAll_clothes_wrapper">
+			<a class="clthAll_clothes_wrapper_thing" href="/#/home/{{male}}/coats/{{item.index}}" ng-repeat="item in viewWear">
+				<div class="clthAll_clothes_wrapper_thing_contImg">
+					<img ng-src="http://dummyimage.com/{{item.photos[0]}}/a0ccdb/2e2e2e.jpg">
+				</div>
+				<h4>{{item.name}}</h4>
+				<p>{{item.price}} $</p>
+			</a>
+		</div>
+	</div>

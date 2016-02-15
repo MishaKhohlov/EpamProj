@@ -151,6 +151,7 @@ h4.main_slog {
 	padding: 20.5px 36px;
 	z-index: 7;
 	position: absolute;
+	height: 57px;
 }
 .main_form_add:hover {
 	text-decoration: none;

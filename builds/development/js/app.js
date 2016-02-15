@@ -275,6 +275,10 @@
                 ++orderArr[cashIndex].quantity;
             }
         },
+        delListOrder: function() {
+            orderArr = [];
+            publickObj.count();
+        },
         count: function() {
              if(orderArr[[0]]) {
                 $rootScope.count = orderArr.length;
@@ -458,11 +462,13 @@
                 }
             }
               $scope.buy = function() {
+                $log.log($scope.size);
                 if($scope.size) {
                     $scope.emptyChex = false;
                     $sessionStorage.lastObj = lastObj;
                     dataFact.setItem($scope.id, $scope.size);
-                } else {
+                    $scope.size = null;
+                } else {     
                     $scope.emptyChex = true;
                 }
               };
@@ -497,9 +503,11 @@
                  $scope.clothes = $sessionStorage.lastObj.clothes;
                  $scope.male = $sessionStorage.lastObj.male;
             } else {
+                $scope.clothes = 'outerwear';
                 $scope.male = 'women';
             }
             function start() {
+                $log.log($scope.list);
                 if($scope.list) {
                    $scope.basketEmpty = true; 
                    starBasket();
@@ -544,6 +552,10 @@
                         }
                     }); 
                      return Math.round(res);
+                };
+                $scope.buy = function() {
+                     dataFact.delListOrder();
+                     $state.go('ordersend');
                 };
             }
         $log.debug("basket controller finish");

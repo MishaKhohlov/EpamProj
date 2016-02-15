@@ -418,6 +418,10 @@ div.basket_table_thing_qtyWrap {
 		margin-bottom: 78px;
 	}
 }
+h1.basket_table_empty {
+	text-align: center;;
+	line-height: 150px;
+}
 @media only screen and (min-device-width: 0px) and (max-device-width: 640px), (min-width: 0px) and (max-width: 640px) { 
 	.basket_title {
 		font-size: 25px;

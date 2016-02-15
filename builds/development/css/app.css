@@ -8,6 +8,8 @@
 @import 'thankYou.css';
 
 /*------------------------------fonts-------------------------------------------*/
+.footer_wrapperImg_scroll { overflow: -moz-scrollbars-none; }
+.footer_wrapperImg_scroll {-ms-overflow-style: none; }
 @font-face {
     font-family: 'latoBold';
     src: local('Lato Bold'), local('LatoBold'), url('../fonts/lato-bold-webfont.eot');
